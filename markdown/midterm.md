@@ -6,8 +6,9 @@ Tags: midterm
 Slug: midterm
 Author: 40923218
 ---
-<a href="https://40923218.github.io/cd2022/content/midterm.html">Arm的操控在這裡</a>
+Arm的操控在這裡
 <!-- PELICAN_END_SUMMARY -->
+<p><iframe width="640" height="360" allowfullscreen="allowfullscreen" frameborder="0" src="https://40923218.github.io/cd2022/downloads/Arm.mp4 "></iframe></p> 
 
 製作流程
 ----
