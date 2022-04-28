@@ -1003,7 +1003,23 @@ var winkVideoData = {
 <h1>W10任務</h1>
 <h2>w10_block_ui</h2>
 <p>流程Wink</p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/w10_block_ui.mp4" width="560"></iframe></p><h1>History</h1>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/w10_block_ui.mp4" width="560"></iframe></p>
+<p></p>
+<p>下面程式碼提供參考</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">    def change_dim(self):
+        workPart = self.theSession.Parts.Work
+        unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+        (自定義1) = workPart.Expressions.FindObject("(自定義1)")
+        (自定義2) = workPart.Expressions.FindObject("(自定義2)")
+        (自定義3) = workPart.Expressions.FindObject("(自定義3)")
+        workPart.Expressions.EditWithUnits((自定義1), unit1, str(self.string02.Value))
+        workPart.Expressions.EditWithUnits((自定義2), unit1, str(self.string0.Value))
+        workPart.Expressions.EditWithUnits((自定義3), unit1, str(self.string01.Value))
+        self.theSession.UpdateManager.DoUpdate(0)</pre>
+<p></p>
+<p>下面這行放在ok_cb、apply_cb的try下面</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">self.change_dim()</pre>
+<p></p><h1>History</h1>
 <p>3/3:</p>
 <p>Initial commit</p>
 <p>(建立倉儲)</p>
@@ -1076,3 +1092,6 @@ var winkVideoData = {
 <p>4/28:</p>
 <p>Join NX UI process Wink</p>
 <p>(新增NX UI 流程Wink)</p>
+<p> </p>
+<p>Join Python Code</p>
+<p>(新增UI Code)</p>

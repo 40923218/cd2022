@@ -141,7 +141,23 @@ img.add_border {
         </header>
     <div id="tipue_search_content">W10任務 << <a href='W10任務.html'>Previous</a> <a href='History.html'>Next</a> >> History<br /><h1>w10_block_ui</h1>
 <p>流程Wink</p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/w10_block_ui.mp4" width="560"></iframe></p><br />W10任務 << <a href='W10任務.html'>Previous</a> <a href='History.html'>Next</a> >> History</div>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/w10_block_ui.mp4" width="560"></iframe></p>
+<p></p>
+<p>下面程式碼提供參考</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">    def change_dim(self):
+        workPart = self.theSession.Parts.Work
+        unit1 = workPart.UnitCollection.FindObject("MilliMeter")
+        (自定義1) = workPart.Expressions.FindObject("(自定義1)")
+        (自定義2) = workPart.Expressions.FindObject("(自定義2)")
+        (自定義3) = workPart.Expressions.FindObject("(自定義3)")
+        workPart.Expressions.EditWithUnits((自定義1), unit1, str(self.string02.Value))
+        workPart.Expressions.EditWithUnits((自定義2), unit1, str(self.string0.Value))
+        workPart.Expressions.EditWithUnits((自定義3), unit1, str(self.string01.Value))
+        self.theSession.UpdateManager.DoUpdate(0)</pre>
+<p></p>
+<p>下面這行放在ok_cb、apply_cb的try下面</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">self.change_dim()</pre>
+<p></p><br />W10任務 << <a href='W10任務.html'>Previous</a> <a href='History.html'>Next</a> >> History</div>
         
     <!-- footer -->
       <div class="container">
