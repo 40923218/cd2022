@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -139,120 +139,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">四設二乙 << <a href='四設二乙.html'>Previous</a> <a href='分配到的作業.html'>Next</a> >> 分配到的作業<br /><h1>run</h1>
-<script src="/get_page/run/cmsimde_site_files/brython.js.下載">
-</script>
-<script src="/get_page/run/cmsimde_site_files/brython_stdlib.js.下載"></script>
-<!-- for ggame -->
-<p>
-<script src="/get_page/run/cmsimde_site_files/jquery-3.3.1.min.js(1).下載"></script>
-<script src="/get_page/run/cmsimde_site_files/jquery-ui.1.12.1.min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/pixi-3.0.5.min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/buzz-1.2.1.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/bs.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/brython_modules.js.下載"></script>
-</p>
-<!-- Cango 程式庫 -->
-<p>
-<script src="/get_page/run/cmsimde_site_files/Cango-24v03-min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/CangoAxes-6v01-min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/gearUtils-09.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/SVGpathUtils-6v03-min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/sylvester.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/PrairieDraw.js.下載"></script>
-</p>
-<!-- for Konva 程式庫 -->
-<p>
-<script src="/get_page/run/cmsimde_site_files/konva.min.js.下載"></script>
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
-}
-</script>
-</p>
-<p><!-- 導入 FileSaver 與 filereader --></p>
-<p>
-<script src="/get_page/run/cmsimde_site_files/FileSaver.min.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/filereader.js.下載" type="text/javascript"></script>
-</p>
-<p><!-- 導入 ace --></p>
-<p>
-<script src="/get_page/run/cmsimde_site_files/ace.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/ext-language_tools.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/mode-python3.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/python.js.下載" type="text/javascript"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
-<p>
-<script type="text/javascript">
-function doSave(storage_id, filename){
-    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
-    filename = document.getElementById(filename).value
-    saveAs(blob, filename+".py");
-}
-</script>
-</p>
-<p><!-- 印出版次與關鍵字程式 --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import ace
-
-# 清除畫布
-def clear_bd1(ev):
-    bd = doc["brython_div1"]
-    bd.clear()
-
-# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
-Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
-
-class button2:
-    def __init__(self, url):
-        self.url = url
-
-    # 記得加入 event 輸入變數
-    def do(self,ev):
-        Ace2.editor.setValue(open(self.url).read())
-        Ace2.editor.scrollToRow(0)
-        Ace2.editor.gotoLine(0)
-        Ace2.run()
-
-################################## grp_2022 start
-# for 2b
-grp_2022_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/c7043ac81005b069c58080c1222fe30048d588cb/grp_2022.py"
-grp_2022 = button2(grp_2022_url)
-doc["grp_2022"].bind("click", grp_2022.do)
-################################## grp_2022 end
-################################## grp2a_2022 start
-# for 2a
-grp2a_2022_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/b78b018f841326f9c8d0ef2391cb5898fa9aaf87/grp2a_2022.py"
-grp2a_2022 = button2(grp2a_2022_url)
-doc["grp2a_2022"].bind("click", grp2a_2022.do)
-################################## grp2a_2022 end
-</script>
-</p>
-<p><button id="grp2a_2022">grp2a_2022</button><button id="grp_2022">grp_2022</button></p>
-<p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor" style="width: 600px; height: 300px;"></div>
-<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
-<p></p>
-<!-- 執行與清除按鈕開始 -->
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<!-- 執行與清除按鈕結束 -->
-<p></p>
-<!-- 程式執行 ouput 區 -->
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
-<div id="brython_div"></div>
-<!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
-<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
-<p></p>
-<br />四設二乙 << <a href='四設二乙.html'>Previous</a> <a href='分配到的作業.html'>Next</a> >> 分配到的作業</div>
+    <div id="tipue_search_content">w10_nx_integ << <a href='w10_nx_integ.html'>Previous</a> <a href='History.html'>Next</a> >> History<br /><h1>w10_ssh</h1><br />w10_nx_integ << <a href='w10_nx_integ.html'>Previous</a> <a href='History.html'>Next</a> >> History</div>
         
     <!-- footer -->
       <div class="container">
