@@ -62,6 +62,8 @@
 <v t="leo.20220331155257.1"><vh>@edit About Me.md</vh></v>
 <v t="leo.20180423103656.1"><vh>@edit 20200813.md</vh></v>
 <v t="leo.20220428170331.1"><vh>@edit w10_block_ui.md</vh></v>
+<v t="leo.20220429151009.1"><vh>@edit w10_nx_integ.md</vh></v>
+<v t="leo.20220429151724.1"><vh>@edit w10_ssh.md</vh></v>
 </v>
 </v>
 </v>
