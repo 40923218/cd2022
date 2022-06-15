@@ -16,1291 +16,6 @@
 <p></p>
 <p><a href="https://40923218.github.io/cd2022/blog/index.html" target="_blank">Blog</a></p>
 <p><a href="https://40923218.github.io/cd2022/reveal/index.html" target="_blank">reveal</a></p>
-<h1>online</h1>
-<h2>MTB</h2>
-<p><a href="/downloads/MTB.7z">MTB零組件</a></p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923218.github.io/cd2022/downloads/MTB.mp4" video="mp4" width="640"></iframe></p>
-<h2>Arm機構做動</h2>
-<p></p>
-<p><br/><br/><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923218.github.io/cd2022/downloads/Arm.mp4" width="640"></iframe></p>
-<h2>tic-tae-toe</h2>
-<p></p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923221.github.io/cd2022/downloads/OOXX.mp4" video="mp4" width="640"></iframe></p>
-<h2>W1~W17</h2>
-<p><a href="https://40923218.github.io/cd2022/content/midterm.html">機構做動</a></p>
-<p>自上學期延伸下來的，上學期做過meArm之後，這次做這個比較得心應手，除了在樹狀圖編排上面比較花時間，編排完之後做模擬編排比較快，總計共兩個小時做完</p>
-<p></p>
-<p><a href="https://40923218.github.io/cd2022/content/w10_block_ui.html">w10</a></p>
-<p>用NX一段時間我才知道原來UI是可以自己做的，讓我知道他不僅僅是個CAD軟體</p>
-<p></p>
-<p><a href="https://40923218.github.io/cd2022/content/w12.html">w12</a></p>
-<p>研究了一下程式碼之後，順利導出了</p>
-<p></p>
-<h2>w14</h2>
-<table style="width: 100%;">
-<tbody>
-<tr style="height: 100%;">
-<td style="height: 100%; width: 0px;">55按键帽（短）</td>
-<td style="height: 100%; width: 0px;">56轴承支撑轴</td>
-<td style="height: 100%; width: 0px;">57轴承支撑圈</td>
-</tr>
-<tr style="height: 100%;">
-<td style="height: 100%; width: 33.3%;"><img alt="" height="auto" src="/images/55按键帽（短）(2D).png" width="70%"/></td>
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/56轴承支撑轴(2D).png" width="70%"/></td>
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/57轴承支撑圈(2D).png" width="70%"/></td>
-</tr>
-<tr style="height: 100%;">
-<td style="height: 100%; width: 0px;">58减速箱上壳（两侧）</td>
-<td style="height: 100%; width: 0px;">59减速箱下壳（两侧电机）</td>
-<td style="height: 100%; width: 0px;">60铰链</td>
-</tr>
-<tr style="height: 100%;">
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/58减速箱上壳（两侧）(2D).png" width="70%"/></td>
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/59减速箱下壳（两侧电机）(2D).png" width="70%"/></td>
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/60铰链(2D).png" width="70%"/></td>
-</tr>
-<tr style="height: 100%;">
-<td style="height: 100%; width: 0px;">61塑料盖板</td>
-<td style="height: 100%; width: 0px;">62输出轴（两侧电机）</td>
-<td style="height: 100%; width: 0px;">63磁编码器PCB</td>
-</tr>
-<tr style="height: 100%;">
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/61塑料盖板(2D).png" width="70%"/></td>
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/62输出轴（两侧电机）(2D).png" width="70%"/></td>
-<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/63磁编码器PCB(2D).png" width="70%"/></td>
-</tr>
-</tbody>
-</table>
-<h2>w15</h2>
-<table style="width: 100%; height: auto;">
-<tbody>
-<tr>
-<td>動態模擬</td>
-<td>操作模擬</td>
-</tr>
-<tr style="height: 100%; width: 100%;">
-<td style="height: 100%; width: 66%;">
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923221.github.io/cd2022/downloads/w15.mp4" video="mp4" width="640"></iframe></p>
-</td>
-<td style="height: 100%; width: 34%;">
-<p>k 逆時針轉動</p>
-<p>i順時針轉動</p>
-<p>h 往前移動</p>
-<p>j 往後移動</p>
-<p>f 往下移動</p>
-<p>g 往上移動</p>
-<p>p 吸起</p>
-</td>
-</tr>
-</tbody>
-</table>
-<p>程式碼(僅供參考)</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
-    axis1=sim.getObject('/motor1')
-    axis2=sim.getObject('/motor2')
-    axis3=sim.getObject('/motor6')
-    suctionPad=sim.getObject('/suctionPad')
-    rotation1 = 0
-    rotation2 = 0
-    rotation3 = 0
-    deg = math.pi/180.
-    enableSuctionPad(true)
-end
-function enableSuctionPad(enable)
-    -- use the suctionPad object to pass the variable activity value
-    -- if enable = true, the activity = 'on'
-    if enable then
-        sim.writeCustomDataBlock(suctionPad,'activity','on')
-    else
-        sim.writeCustomDataBlock(suctionPad,'activity','off')
-    end
-end
-function sysCall_actuation() 
---[[
-    rotation1 = rotation1 + 1*deg
-    print(rotation1)
-    sim.setJointPosition(axis1, -rotation1)
-    sim.setJointPosition(axis2, -rotation1)
-]]
-    message, auxiliaryData=sim.getSimulatorMessage()
-    while message ~= -1 do
-        key=auxiliaryData[1]
-        sim.addStatusbarMessage('user press key:'..key)
-        if (message==sim.message_keypress) then
-           --if (auxiliaryData[1]==112) then --p activate the suction pad
-            if (auxiliaryData[1]==string.byte('p')) then
-                -- if key p pressed activate the suction mode
---sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
-                enableSuctionPad(true)
-            end -- if p
-            if (auxiliaryData[1]==string.byte('q')) then --q deactivate the suction pad
-                -- if key q pressed deactivate the suction mode
---sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
-                enableSuctionPad(false)
-            end -- if q
-            if (auxiliaryData[1]==string.byte('k')) then --k right turn in degree
-                -- if key k pressed axis1 angle adds 2 degrees
-                 rotation1 = rotation1 + 1*deg
-                 --sim.setJointPosition(axis1, rotation1)
-                 sim.setJointTargetPosition(axis1, rotation1)
-            end -- if k
-            if (auxiliaryData[1]==string.byte('l')) then --l left turn in degree
-                -- if key l pressed axis1 angle substract 2 degrees
-                 rotation1 = rotation1 - 1*deg
-                 --sim.setJointPosition(axis1, rotation1)
-                 sim.setJointTargetPosition(axis1, rotation1)
-            end -- if l
--- for joint2 start ##########################################################
-            if (auxiliaryData[1]== string.byte("h")) then --r right turn in degree
-                -- if key r pressed axis1 angle adds 2 degrees
-                 rotation2 = rotation2 + 1*deg
-                 --sim.setJointPosition(axis2, rotation2)
-                 sim.setJointTargetPosition(axis2, rotation2)
-            end -- if k
-            if (auxiliaryData[1]==string.byte("j")) then
-                -- if key j pressed axis2 angle substract 2 degrees
-                 rotation2 = rotation2 - 1*deg
-                 --sim.setJointPosition(axis2, rotation2)
-                 sim.setJointTargetPosition(axis2, rotation2)
-            end -- if j
--- for joint2 end ##########################################################
--- for joint3 start ##########################################################
-            if (auxiliaryData[1]== string.byte("f")) then
-                -- if key f pressed axis3 angle adds 2 degrees
-                 rotation3 = rotation3 + 1*deg
-                 --sim.setJointPosition(axis3, rotation3)
-                 sim.setJointTargetPosition(axis3, rotation3)
-            end -- if f
-            if (auxiliaryData[1]==string.byte("g")) then
-                -- if key g pressed axis3 angle substract 2 degrees
-                 rotation3 = rotation3 - 1*deg
-                 --sim.setJointPosition(axis3, rotation3)
-                 sim.setJointTargetPosition(axis3, rotation3)
-            end -- if g
--- for joint2 end ##########################################################
-            if (auxiliaryData[1]==100) then --d suction pad down
-                -- if key d pressed axis3 will down 0.05 m
-                 distance3 = distance3 - 0.05
-                 sim.setJointPosition(axis3, distance3)
-            end -- if d
-            if (auxiliaryData[1]==117) then --u suction pad up
-                -- if key u pressed axis3 will up 0.05 m
-                 distance3 = distance3 + 0.05
-                 sim.setJointPosition(axis3, distance3)
-            end -- if u
-            if (auxiliaryData[1]==99) then --c coordinate of block
-                blockPosition = sim.getObjectPosition(block, BaseFrame)
-                sim.addStatusbarMessage("coordinate:"..table_to_string(blockPosition))
-            end --if c
-       end  -- if
-    message, auxiliaryData=sim.getSimulatorMessage()
-    end -- while
-end -- function
- 
-function sysCall_sensing() 
---[[
-    -- Read Proximity sensor (0= nothing detected, 1 = object detected)
-    local res = sim.readProximitySensor(proximity)
- 
-    -- Check if possible to insert an new box
-    if (sim.getSimulationTime()-T_last_inserted &gt; T_insert) and not hasStopped then
-        insertBox()
-    end
- 
-    -- If proximity sensor detects an object, stop the belt, stop inserting objects
-    if res == 1 and not hasStopped then
-        if boolList[1] then
-            sim.setScriptSimulationParameter(sim.handle_self,"conveyorBeltVelocity",0)
-            deltaTime = sim.getSimulationTime()-T_last_inserted
-            hasStopped = true
-        else
-            local box = table.remove(boxList,1)
-            local boxDummy = table.remove(boxDummyList,1)
-            table.remove(boolList,1)
- 
-            sim.removeObject(box)
-            sim.removeObject(boxDummy)
-        end
-    end
- 
-    -- If proximity sensor detects nothing and belt has stopped, start belt, continue inserting
-    if res == 0 and hasStopped then
-        sim.setScriptSimulationParameter(sim.handle_self,"conveyorBeltVelocity",beltSpeed)
-        hasStopped = false
-        T_last_inserted = sim.getSimulationTime()-deltaTime
-    end
-     
-]]--
-end
-function sysCall_sensing()
-    -- put your sensing code here
-end
-function sysCall_cleanup()
-    -- do some clean-up here
-end
--- Convert a lua table into a lua syntactically correct string
-function table_to_string(tbl)
-    local result = "{"
-    for k, v in pairs(tbl) do
-        -- Check the key type (ignore any numerical keys - assume its an array)
-        if type(k) == "string" then
-            result = result.."[\""..k.."\"]".."="
-        end
-        -- Check the value type
-        if type(v) == "table" then
-            result = result..table_to_string(v)
-        elseif type(v) == "boolean" then
-            result = result..tostring(v)
-        else
-            v = round(v, 4)
-            result = result.."\""..v.."\""
-        end
-        result = result..","
-    end
-    -- Remove leading commas from the result
-    if result ~= "" then
-        result = result:sub(1, result:len()-1)
-    end
-    return result.."}"
-end
-function round(x, n)
-    n = math.pow(10, n or 0)
-    x = x * n
-    if x &gt;= 0 then x = math.floor(x + 0.5) else x = math.ceil(x - 0.5) end
-    return x / n
-end
-function insertBox()
-    -- Generate random numbers
-    local rand1 = math.random()
-    local rand2 = math.random()
-    local rand3 = math.random()
-    -- Generate random disturbances on position and orientation
-    local dx = (2*rand1-1)*0.1
-    local dy = (2*rand2-1)*0.1
-    local dphi = (2*rand3-1)*0.5
-    local disturbedCoordinates = {0,0,0}
-    disturbedCoordinates[1] = insertCoordinate[1]+dx
-    disturbedCoordinates[2] = insertCoordinate[2]+dy
-    disturbedCoordinates[3] = insertCoordinate[3]
-    -- Copy and paste box and boxDummy
-    local insertedObjects = sim.copyPasteObjects({box,boxDummy},0)
-    -- Update last inserted box time
-    T_last_inserted = sim.getSimulationTime()
-    -- Move and rotate
-    sim.setObjectPosition(insertedObjects[1],-1,disturbedCoordinates)
-    sim.setObjectOrientation(insertedObjects[1],-1,{0,0,dphi})
-    -- Store handles to boxes and dummies
-    table.insert(boxList,insertedObjects[1])
-    table.insert(boxDummyList,insertedObjects[2]) 
-    -- Decide if object is good or bad
-    local decision = math.random() 
-    if decision &lt;= goodPercentage then
-    -- Object is good, assign goodColor
-        sim.setShapeColor(insertedObjects[1],nil,sim.colorcomponent_ambient_diffuse,goodColor)
-        table.insert(boolList,true)
-    else
-    -- Object is bad, assign random color
-        sim.setShapeColor(insertedObjects[1],nil,sim.colorcomponent_ambient_diffuse,{rand1,rand2,rand3})
-        table.insert(boolList,false)
-    end
-end
--- See the user manual or the available code snippets for additional callback functions and details</pre>
-<p><br/><br/><br/></p><h2>w16</h2>
-<p><img alt="" height="820" src="/images/w16.jpg" width="556"/></p>
-<h1>homepage</h1>
-<p>兩班成員名單</p>
-<h2>四設二甲</h2>
-<table height="50" width="100%">
-<tbody>
-<tr>
-<td><span>學號</span></td>
-<td><span>倉儲</span></td>
-<td><span>網頁</span></td>
-<td><span>組別</span></td>
-</tr>
-<tr>
-<td><span>40623143</span><span><br/></span></td>
-<td><a href="https://github.com/40623143/cd2022">40623143</a></td>
-<td><a href="https://40623143.github.io/cd2022/content/index.html">40623143</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40823132</span><span><br/></span></td>
-<td><a href="https://github.com/40823132/cd2022">40823132</a></td>
-<td><a href="https://40823132.github.io/cd2022/content/index.html">40823132</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40823143</span><span><br/></span></td>
-<td><a href="https://github.com/40823143/cd2022">40823143</a></td>
-<td><a href="https://40823143.github.io/cd2022/content/index.html">40823143</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923101</span><span><br/></span></td>
-<td><a href="https://github.com/a40923101/cd2022">a40923101</a></td>
-<td><a href="https://a40923101.github.io/cd2022/content/index.html">a40923101</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923102</span><span><br/></span></td>
-<td><a href="https://github.com/40923102/cd2022">40923102</a></td>
-<td><a href="https://40923102.github.io/cd2022/content/index.html">40923102</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923103</span><span><br/></span></td>
-<td><a href="https://github.com/40923103/cd2022">40923103</a></td>
-<td><a href="https://40923103.github.io/cd2022/content/index.html">40923103</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923104</span><span><br/></span></td>
-<td><a href="https://github.com/409231044/cd2022">409231044</a></td>
-<td><a href="https://409231044.github.io/cd2022/content/index.html">409231044</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923105</span><span><br/></span></td>
-<td><a href="https://github.com/40923105/cd2022">40923105</a></td>
-<td><a href="https://40923105.github.io/cd2022/content/index.html">40923105</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923106</span><span><br/></span></td>
-<td><a href="https://github.com/40923106/cd2022">40923106</a></td>
-<td><a href="https://40923106.github.io/cd2022/content/index.html">40923106</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923107</span><span><br/></span></td>
-<td><a href="https://github.com/40923107/cd2022">40923107</a></td>
-<td><a href="https://40923107.github.io/cd2022/content/index.html">40923107</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923108</span><span><br/></span></td>
-<td><a href="https://github.com/40923108/cd2022">40923108</a></td>
-<td><a href="https://40923108.github.io/cd2022/content/index.html">40923108</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923109</span><span><br/></span></td>
-<td><a href="https://github.com/CYC40923109/cd2022">CYC40923109</a></td>
-<td><a href="https://CYC40923109.github.io/cd2022/content/index.html">CYC40923109</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923110</span><span><br/></span></td>
-<td><a href="https://github.com/40923110/cd2022">40923110</a></td>
-<td><a href="https://40923110.github.io/cd2022/content/index.html">40923110</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923111</span><span><br/></span></td>
-<td><a href="https://github.com/40923111/cd2022">40923111</a></td>
-<td><a href="https://40923111.github.io/cd2022/content/index.html">40923111</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923113</span><span><br/></span></td>
-<td><a href="https://github.com/40923113/cd2022">40923113</a></td>
-<td><a href="https://40923113.github.io/cd2022/content/index.html">40923113</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923114</span><span><br/></span></td>
-<td><a href="https://github.com/40923114/cd2022">40923114</a></td>
-<td><a href="https://40923114.github.io/cd2022/content/index.html">40923114</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923115</span><span><br/></span></td>
-<td><a href="https://github.com/jason60714/cd2022">jason60714</a></td>
-<td><a href="https://jason60714.github.io/cd2022/content/index.html">jason60714</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923116</span><span><br/></span></td>
-<td><a href="https://github.com/40923116/cd2022">40923116</a></td>
-<td><a href="https://40923116.github.io/cd2022/content/index.html">40923116</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923117</span><span><br/></span></td>
-<td><a href="https://github.com/Maxlee999/cd2022">Maxlee999</a></td>
-<td><a href="https://Maxlee999.github.io/cd2022/content/index.html">Maxlee999</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923118</span><span><br/></span></td>
-<td><a href="https://github.com/40923118/cd2022">40923118</a></td>
-<td><a href="https://40923118.github.io/cd2022/content/index.html">40923118</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923119</span><span><br/></span></td>
-<td><a href="https://github.com/40923119/cd2022">40923119</a></td>
-<td><a href="https://40923119.github.io/cd2022/content/index.html">40923119</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923120</span><span><br/></span></td>
-<td><a href="https://github.com/40923120/cd2022">40923120</a></td>
-<td><a href="https://40923120.github.io/cd2022/content/index.html">40923120</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923121</span><span><br/></span></td>
-<td><a href="https://github.com/40923121/cd2022">40923121</a></td>
-<td><a href="https://40923121.github.io/cd2022/content/index.html">40923121</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923122</span><span><br/></span></td>
-<td><a href="https://github.com/40923122/cd2022">40923122</a></td>
-<td><a href="https://40923122.github.io/cd2022/content/index.html">40923122</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923123</span><span><br/></span></td>
-<td><a href="https://github.com/40923123/cd2022">40923123</a></td>
-<td><a href="https://40923123.github.io/cd2022/content/index.html">40923123</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923124</span><span><br/></span></td>
-<td><a href="https://github.com/40923124/cd2022">40923124</a></td>
-<td><a href="https://40923124.github.io/cd2022/content/index.html">40923124</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923125</span><span><br/></span></td>
-<td><a href="https://github.com/40923125/cd2022">40923125</a></td>
-<td><a href="https://40923125.github.io/cd2022/content/index.html">40923125</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923126</span><span><br/></span></td>
-<td><a href="https://github.com/40923126-1/cd2022">40923126-1</a></td>
-<td><a href="https://40923126-1.github.io/cd2022/content/index.html">40923126-1</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923127</span><span><br/></span></td>
-<td><a href="https://github.com/40923127-1/cd2022">40923127-1</a></td>
-<td><a href="https://40923127-1.github.io/cd2022/content/index.html">40923127-1</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923128</span><span><br/></span></td>
-<td><a href="https://github.com/40923128/cd2022">40923128</a></td>
-<td><a href="https://40923128.github.io/cd2022/content/index.html">40923128</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923129</span><span><br/></span></td>
-<td><a href="https://github.com/40923129/cd2022">40923129</a></td>
-<td><a href="https://40923129.github.io/cd2022/content/index.html">40923129</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923130</span><span><br/></span></td>
-<td><a href="https://github.com/40923130/cd2022">40923130</a></td>
-<td><a href="https://40923130.github.io/cd2022/content/index.html">40923130</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923131</span><span><br/></span></td>
-<td><a href="https://github.com/40923131/cd2022">40923131</a><br/><a href="https://github.com//cd2022"></a></td>
-<td><a href="https://40923131.github.io/cd2022/content/index.html">40923131</a><br/><a href="https://.github.io/cd2022/content/index.html"></a></td>
-<td></td>
-</tr>
-<tr>
-<td><span>40923133</span><span><br/></span></td>
-<td><a href="https://github.com/40923133/cd2022">40923133</a></td>
-<td><a href="https://40923133.github.io/cd2022/content/index.html">40923133</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923134</span><span><br/></span></td>
-<td><a href="https://github.com/40923134/cd2022">40923134</a></td>
-<td><a href="https://40923134.github.io/cd2022/content/index.html">40923134</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923135</span><span><br/></span></td>
-<td><a href="https://github.com/40923135/cd2022">40923135</a></td>
-<td><a href="https://40923135.github.io/cd2022/content/index.html">40923135</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923136</span><span><br/></span></td>
-<td><a href="https://github.com/40923136-1/cd2022">40923136-1</a></td>
-<td><a href="https://40923136-1.github.io/cd2022/content/index.html">40923136-1</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923137</span><span><br/></span></td>
-<td><a href="https://github.com/s40923137/cd2022">s40923137</a></td>
-<td><a href="https://s40923137.github.io/cd2022/content/index.html">s40923137</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923138</span><span><br/></span></td>
-<td><a href="https://github.com/40923138/cd2022">40923138</a><br/><a href="https://github.com//cd2022"></a></td>
-<td><a href="https://40923138.github.io/cd2022/content/index.html">40923138</a><br/><a href="https://.github.io/cd2022/content/index.html"></a></td>
-<td></td>
-</tr>
-<tr>
-<td><span>40923139</span><span><br/></span></td>
-<td><a href="https://github.com/40923139/cd2022">40923139</a></td>
-<td><a href="https://40923139.github.io/cd2022/content/index.html">40923139</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923140</span><span><br/></span></td>
-<td><a href="https://github.com/40923140/cd2022">40923140</a></td>
-<td><a href="https://40923140.github.io/cd2022/content/index.html">40923140</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923142</span><span><br/></span></td>
-<td><a href="https://github.com/40923142/cd2022">40923142</a></td>
-<td><a href="https://40923142.github.io/cd2022/content/index.html">40923142</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923143</span><span><br/></span></td>
-<td><a href="https://github.com/40923143/cd2022">40923143</a></td>
-<td><a href="https://40923143.github.io/cd2022/content/index.html">40923143</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923144</span><span><br/></span></td>
-<td><a href="https://github.com/40923144/cd2022">40923144</a></td>
-<td><a href="https://40923144.github.io/cd2022/content/index.html">40923144</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923145</span><span><br/></span></td>
-<td><a href="https://github.com/40923145/cd2022">40923145</a></td>
-<td><a href="https://40923145.github.io/cd2022/content/index.html">40923145</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923146</span><span><br/></span></td>
-<td><a href="https://github.com/a40923146/cd2022">a40923146</a></td>
-<td><a href="https://a40923146.github.io/cd2022/content/index.html">a40923146</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923147</span><span><br/></span></td>
-<td><a href="https://github.com/40923147/cd2022">40923147</a></td>
-<td><a href="https://40923147.github.io/cd2022/content/index.html">40923147</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923148</span><span><br/></span></td>
-<td><a href="https://github.com/40923148/cd2022">40923148</a></td>
-<td><a href="https://40923148.github.io/cd2022/content/index.html">40923148</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923149</span><span><br/></span></td>
-<td><a href="https://github.com/40923149r/cd2022">40923149r</a></td>
-<td><a href="https://40923149r.github.io/cd2022/content/index.html">40923149r</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923150</span><span><br/></span></td>
-<td><a href="https://github.com/40923150/cd2022">40923150</a></td>
-<td><a href="https://40923150.github.io/cd2022/content/index.html">40923150</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923151</span><span><br/></span></td>
-<td><a href="https://github.com/40923151/cd2022">40923151</a></td>
-<td><a href="https://40923151.github.io/cd2022/content/index.html">40923151</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923152</span><span><br/></span></td>
-<td><a href="https://github.com/40923152/cd2022">40923152</a></td>
-<td><a href="https://40923152.github.io/cd2022/content/index.html">40923152</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923153</span><span><br/></span></td>
-<td><a href="https://github.com/40923153/cd2022">40923153</a></td>
-<td><a href="https://40923153.github.io/cd2022/content/index.html">40923153</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923154</span><span><br/></span></td>
-<td><a href="https://github.com/40923154/cd2022">40923154</a></td>
-<td><a href="https://40923154.github.io/cd2022/content/index.html">40923154</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923156</span><span><br/></span></td>
-<td><a href="https://github.com/ZHILIN-0817/cd2022">ZHILIN-0817</a></td>
-<td><a href="https://ZHILIN-0817.github.io/cd2022/content/index.html">ZHILIN-0817</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923157</span><span><br/></span></td>
-<td><a href="https://github.com/40923157/cd2022">40923157</a><br/><a href="https://github.com//cd2022"></a></td>
-<td><a href="https://40923157.github.io/cd2022/content/index.html">40923157</a><br/><a href="https://.github.io/cd2022/content/index.html"></a></td>
-<td></td>
-</tr>
-<tr>
-<td><span>40971134</span><span><br/></span></td>
-<td><a href="https://github.com/40971134/cd2022">40971134</a></td>
-<td><a href="https://40971134.github.io/cd2022/content/index.html">40971134</a></td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<h2>四設二乙</h2>
-<p></p>
-<table height="50" width="100%">
-<tbody>
-<tr>
-<td><span>學號</span></td>
-<td><span>倉儲</span></td>
-<td><span>網頁</span></td>
-<td><span>組別</span></td>
-</tr>
-<tr>
-<td><span>40623143</span><span><br/></span></td>
-<td><a href="https://github.com/40623143/cd2022">40623143</a></td>
-<td><a href="https://40623143.github.io/cd2022/content/index.html">40623143</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40723134</span><span><br/></span></td>
-<td><a href="https://github.com/40723134/cd2022">40723134</a></td>
-<td><a href="https://40723134.github.io/cd2022/content/index.html">40723134</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40723136</span><span><br/></span></td>
-<td><a href="https://github.com/s40723136/cd2022">s40723136</a></td>
-<td><a href="https://s40723136.github.io/cd2022/content/index.html">s40723136</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40723146</span><span><br/></span></td>
-<td><a href="https://github.com/40723146/cd2022">40723146</a></td>
-<td><a href="https://40723146.github.io/cd2022/content/index.html">40723146</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40723217</span><span><br/></span></td>
-<td><a href="https://github.com/40723217/cd2022">40723217</a></td>
-<td><a href="https://40723217.github.io/cd2022/content/index.html">40723217</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40732331</span><span><br/></span></td>
-<td><a href="https://github.com/40732331/cd2022">40732331</a></td>
-<td><a href="https://40732331.github.io/cd2022/content/index.html">40732331</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40823215</span><span><br/></span></td>
-<td><a href="https://github.com/40823215/cd2022">40823215</a></td>
-<td><a href="https://40823215.github.io/cd2022/content/index.html">40823215</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923201</span><span><br/></span></td>
-<td><a href="https://github.com/40923201/cd2022">40923201</a></td>
-<td><a href="https://40923201.github.io/cd2022/content/index.html">40923201</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923203</span><span><br/></span></td>
-<td><a href="https://github.com/youshin40923203/cd2022">youshin40923203</a></td>
-<td><a href="https://youshin40923203.github.io/cd2022/content/index.html">youshin40923203</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923204</span><span><br/></span></td>
-<td><a href="https://github.com/40923204/cd2022">40923204</a></td>
-<td><a href="https://40923204.github.io/cd2022/content/index.html">40923204</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923205</span><span><br/></span></td>
-<td><a href="https://github.com/40923205/cd2022">40923205</a></td>
-<td><a href="https://40923205.github.io/cd2022/content/index.html">40923205</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923206</span><span><br/></span></td>
-<td><a href="https://github.com/40923206-1/cd2022">40923206-1</a></td>
-<td><a href="https://40923206-1.github.io/cd2022/content/index.html">40923206-1</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923207</span><span><br/></span></td>
-<td><a href="https://github.com/40923207/cd2022">40923207</a></td>
-<td><a href="https://40923207.github.io/cd2022/content/index.html">40923207</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923208</span><span><br/></span></td>
-<td><a href="https://github.com/nfu40923208/cd2022">nfu40923208</a></td>
-<td><a href="https://nfu40923208.github.io/cd2022/content/index.html">nfu40923208</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923209</span><span><br/></span></td>
-<td><a href="https://github.com/nfu40923209/cd2022">nfu40923209</a></td>
-<td><a href="https://nfu40923209.github.io/cd2022/content/index.html">nfu40923209</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923210</span><span><br/></span></td>
-<td><a href="https://github.com/40923210/cd2022">40923210</a></td>
-<td><a href="https://40923210.github.io/cd2022/content/index.html">40923210</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923211</span><span><br/></span></td>
-<td><a href="https://github.com/a40923211/cd2022">a40923211</a></td>
-<td><a href="https://a40923211.github.io/cd2022/content/index.html">a40923211</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923212</span><span><br/></span></td>
-<td><a href="https://github.com/40923212/cd2022">40923212</a></td>
-<td><a href="https://40923212.github.io/cd2022/content/index.html">40923212</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923213</span><span><br/></span></td>
-<td><a href="https://github.com/40923213/cd2022">40923213</a></td>
-<td><a href="https://40923213.github.io/cd2022/content/index.html">40923213</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923214</span><span><br/></span></td>
-<td><a href="https://github.com/40923214/cd2022">40923214</a></td>
-<td><a href="https://40923214.github.io/cd2022/content/index.html">40923214</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923216</span><span><br/></span></td>
-<td><a href="https://github.com/40923216/cd2022">40923216</a></td>
-<td><a href="https://40923216.github.io/cd2022/content/index.html">40923216</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923217</span><span><br/></span></td>
-<td><a href="https://github.com/40923217/cd2022">40923217</a></td>
-<td><a href="https://40923217.github.io/cd2022/content/index.html">40923217</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923218</span><span><br/></span></td>
-<td><a href="https://github.com/40923218/cd2022">40923218</a></td>
-<td><a href="https://40923218.github.io/cd2022/content/index.html">40923218</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923219</span><span><br/></span></td>
-<td><a href="https://github.com/nfu40923219/cd2022">nfu40923219</a></td>
-<td><a href="https://nfu40923219.github.io/cd2022/content/index.html">nfu40923219</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923220</span><span><br/></span></td>
-<td><a href="https://github.com/40923220/cd2022">40923220</a></td>
-<td><a href="https://40923220.github.io/cd2022/content/index.html">40923220</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923221</span><span><br/></span></td>
-<td><a href="https://github.com/40923221/cd2022">40923221</a></td>
-<td><a href="https://40923221.github.io/cd2022/content/index.html">40923221</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923223</span><span><br/></span></td>
-<td><a href="https://github.com/40923223/cd2022">40923223</a></td>
-<td><a href="https://40923223.github.io/cd2022/content/index.html">40923223</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923224</span><span><br/></span></td>
-<td><a href="https://github.com/s40923224/cd2022">s40923224</a></td>
-<td><a href="https://s40923224.github.io/cd2022/content/index.html">s40923224</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923225</span><span><br/></span></td>
-<td><a href="https://github.com/40923225/cd2022">40923225</a></td>
-<td><a href="https://40923225.github.io/cd2022/content/index.html">40923225</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923226</span><span><br/></span></td>
-<td><a href="https://github.com/40923226/cd2022">40923226</a></td>
-<td><a href="https://40923226.github.io/cd2022/content/index.html">40923226</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923227</span><span><br/></span></td>
-<td><a href="https://github.com/40923227/cd2022">40923227</a></td>
-<td><a href="https://40923227.github.io/cd2022/content/index.html">40923227</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923228</span><span><br/></span></td>
-<td><a href="https://github.com/40923228/cd2022">40923228</a></td>
-<td><a href="https://40923228.github.io/cd2022/content/index.html">40923228</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923229</span><span><br/></span></td>
-<td><a href="https://github.com/40923229/cd2022">40923229</a></td>
-<td><a href="https://40923229.github.io/cd2022/content/index.html">40923229</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923230</span><span><br/></span></td>
-<td><a href="https://github.com/40923230/cd2022">40923230</a></td>
-<td><a href="https://40923230.github.io/cd2022/content/index.html">40923230</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923231</span><span><br/></span></td>
-<td><a href="https://github.com/40923231/cd2022">40923231</a></td>
-<td><a href="https://40923231.github.io/cd2022/content/index.html">40923231</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923232</span><span><br/></span></td>
-<td><a href="https://github.com/40923232/cd2022">40923232</a></td>
-<td><a href="https://40923232.github.io/cd2022/content/index.html">40923232</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923233</span><span><br/></span></td>
-<td><a href="https://github.com/40923233/cd2022">40923233</a></td>
-<td><a href="https://40923233.github.io/cd2022/content/index.html">40923233</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923234</span><span><br/></span></td>
-<td><a href="https://github.com/40923234/cd2022">40923234</a></td>
-<td><a href="https://40923234.github.io/cd2022/content/index.html">40923234</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923235</span><span><br/></span></td>
-<td><a href="https://github.com/40923235/cd2022">40923235</a></td>
-<td><a href="https://40923235.github.io/cd2022/content/index.html">40923235</a></td>
-<td>1</td>
-</tr>
-<tr>
-<td><span>40923236</span><span><br/></span></td>
-<td><a href="https://github.com/40923236/cd2022">40923236</a></td>
-<td><a href="https://40923236.github.io/cd2022/content/index.html">40923236</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923237</span><span><br/></span></td>
-<td><a href="https://github.com/40923237/cd2022">40923237</a></td>
-<td><a href="https://40923237.github.io/cd2022/content/index.html">40923237</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923238</span><span><br/></span></td>
-<td><a href="https://github.com/40923238/cd2022">40923238</a></td>
-<td><a href="https://40923238.github.io/cd2022/content/index.html">40923238</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923240</span><span><br/></span></td>
-<td><a href="https://github.com/40923240/cd2022">40923240</a></td>
-<td><a href="https://40923240.github.io/cd2022/content/index.html">40923240</a></td>
-<td>2</td>
-</tr>
-<tr>
-<td><span>40923241</span><span><br/></span></td>
-<td><a href="https://github.com/40923241/cd2022">40923241</a></td>
-<td><a href="https://40923241.github.io/cd2022/content/index.html">40923241</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923242</span><span><br/></span></td>
-<td><a href="https://github.com/40923242/cd2022">40923242</a></td>
-<td><a href="https://40923242.github.io/cd2022/content/index.html">40923242</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923243</span><span><br/></span></td>
-<td><a href="https://github.com/40923243/cd2022">40923243</a></td>
-<td><a href="https://40923243.github.io/cd2022/content/index.html">40923243</a></td>
-<td>4</td>
-</tr>
-<tr>
-<td><span>40923245</span><span><br/></span></td>
-<td><a href="https://github.com/40923245-1/cd2022">40923245-1</a></td>
-<td><a href="https://40923245-1.github.io/cd2022/content/index.html">40923245-1</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923246</span><span><br/></span></td>
-<td><a href="https://github.com/40923246/cd2022">40923246</a></td>
-<td><a href="https://40923246.github.io/cd2022/content/index.html">40923246</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923247</span><span><br/></span></td>
-<td><a href="https://github.com/40923247/cd2022">40923247</a></td>
-<td><a href="https://40923247.github.io/cd2022/content/index.html">40923247</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923248</span><span><br/></span></td>
-<td><a href="https://github.com/40923248/cd2022">40923248</a></td>
-<td><a href="https://40923248.github.io/cd2022/content/index.html">40923248</a></td>
-<td>7</td>
-</tr>
-<tr>
-<td><span>40923249</span><span><br/></span></td>
-<td><a href="https://github.com/40923249-1/cd2022">40923249-1</a></td>
-<td><a href="https://40923249-1.github.io/cd2022/content/index.html">40923249-1</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923250</span><span><br/></span></td>
-<td><a href="https://github.com/40923250/cd2022">40923250</a></td>
-<td><a href="https://40923250.github.io/cd2022/content/index.html">40923250</a></td>
-<td>6</td>
-</tr>
-<tr>
-<td><span>40923251</span><span><br/></span></td>
-<td><a href="https://github.com/40923251/cd2022">40923251</a></td>
-<td><a href="https://40923251.github.io/cd2022/content/index.html">40923251</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40923252</span><span><br/></span></td>
-<td><a href="https://github.com/40923252/cd2022">40923252</a></td>
-<td><a href="https://40923252.github.io/cd2022/content/index.html">40923252</a></td>
-<td>3</td>
-</tr>
-<tr>
-<td><span>40923253</span><span><br/></span></td>
-<td><a href="https://github.com/40923253/cd2022">40923253</a></td>
-<td><a href="https://40923253.github.io/cd2022/content/index.html">40923253</a></td>
-<td>5</td>
-</tr>
-<tr>
-<td><span>40971220</span><span><br/></span></td>
-<td><a href="https://github.com/40971220/cd2022">40971220</a></td>
-<td><a href="https://40971220.github.io/cd2022/content/index.html">40971220</a></td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-<h1>其他</h1>
-<h2>分配到的作業</h2>
-<p>21:<a href="https://youtu.be/9s4ppar92pc">4472 LAB 06 ROCKER ARM</a></p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/21.mp4" width="560"></iframe></p>
-<p>22:<a href="https://youtu.be/nvh3H8MXZpE">4472 LAB 06 ROCKER ARM Working Drawing</a></p>
-<p></p>
-<script>
-var winkVideoData = {
-  dataVersion: 1,
-  frameRate: 10,
-  buttonFrameLength: 5,
-  buttonFrameOffset: 2,
-  frameStops: {
-    "2": [
-      { type: "gotoframe", rect: { x: 599, y: 359, width: 60, height: 24 }, target: 3 },
-    ],
-  },
-};
-</script>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
-<source src="https://40923218.github.io/cd2022/downloads/22.mp4" type="video/mp4"/></video>
-<div class="winkVideoOverlayClass"></div>
-<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
-<div class="winkVideoControlBarProgressLeftClass"></div>
-<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
-<div class="winkVideoControlBarProgressRightClass"></div>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass"></div>
-</div>
-<div class="winkVideoPlayOverlayClass"></div>
-</div>
-<p>23:<a href="https://youtu.be/fArhw14iSIg">4472 HW13 NX Linked Body Brake Rotor</a></p>
-<p></p>
-<script>
-var winkVideoData = {
-  dataVersion: 1,
-  frameRate: 10,
-  buttonFrameLength: 5,
-  buttonFrameOffset: 2,
-  frameStops: {
-    "2": [
-      { type: "gotoframe", rect: { x: 27, y: 94, width: 60, height: 24 }, target: 3 },
-    ],
-  },
-};
-</script>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
-<source src="https://40923218.github.io/cd2022/downloads/23.mp4" type="video/mp4"/></video>
-<div class="winkVideoOverlayClass"></div>
-<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
-<div class="winkVideoControlBarProgressLeftClass"></div>
-<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
-<div class="winkVideoControlBarProgressRightClass"></div>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass"></div>
-</div>
-<div class="winkVideoPlayOverlayClass"></div>
-</div>
-<p></p>
-<p>24:<a href="https://youtu.be/Rl9n3Wmvbyg">4472 HW14 NX Part Family Example</a></p>
-<p></p>
-<script>
-var winkVideoData = {
-  dataVersion: 1,
-  frameRate: 10,
-  buttonFrameLength: 5,
-  buttonFrameOffset: 2,
-  frameStops: {
-    "2": [
-      { type: "gotoframe", rect: { x: 124, y: 192, width: 60, height: 24 }, target: 3 },
-    ],
-  },
-};
-</script>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
-<source src="https://40923218.github.io/cd2022/downloads/24.mp4" type="video/mp4"/></video>
-<div class="winkVideoOverlayClass"></div>
-<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
-<div class="winkVideoControlBarProgressLeftClass"></div>
-<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
-<div class="winkVideoControlBarProgressRightClass"></div>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass"></div>
-</div>
-<div class="winkVideoPlayOverlayClass"></div>
-</div>
-<p></p>
-<p></p>
-<p>25:<a href="https://youtu.be/KHWFCeB0ZH4">4472 Lab 07 NX Assembly Modeling - Pattern Component</a></p>
-<p></p>
-<script>
-var winkVideoData = {
-  dataVersion: 1,
-  frameRate: 10,
-  buttonFrameLength: 5,
-  buttonFrameOffset: 2,
-  frameStops: {
-  },
-};
-</script>
-<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
-<source src="https://40923218.github.io/cd2022/downloads/25.mp4" type="video/mp4"/></video>
-<div class="winkVideoOverlayClass"></div>
-<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
-<div class="winkVideoControlBarProgressLeftClass"></div>
-<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
-<div class="winkVideoControlBarProgressRightClass"></div>
-<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
-<div class="winkVideoControlBarProgressThumbClass">
-<h2>Scarysim無法開啟解決方法</h2>
-<p>感謝同學相助<br/><a href="https://drive.google.com/drive/folders/1Ntk-dfI9GIgw_QVyUj3sSobkZOIkaAGY">按此下載檔案</a></p>
-<p></p>
-<p>第一步:</p>
-<p>下載檔案後解壓縮</p>
-<p></p>
-<p>第二步:</p>
-<p>解壓縮內有<span>"<span>release</span>"資料夾，經整個資料夾丟到colne下來的"<span>scarysim</span>"裡面</span></p>
-<p><img alt="" height="50%" src="/images/noname.png" width="50%"/></p>
-<p></p>
-<p>第三步:</p>
-<p>將解壓縮內的"<span>coppeliasim410_msys2</span>"丟到data資料夾內</p>
-<p><img alt="" height="50%" src="/images/noname2.png" width="50%"/></p>
-<p></p>
-<p>第四步:開啟資料夾內部的"<span>Scarysim.exe</span>"即可</p>
-<p><img alt="" height="50%" src="/images/noname3.png" width="50%"/></p>
-</div>
-</div>
-<div class="winkVideoPlayOverlayClass">
-<h2>心得</h2>
-<div>
-<div>本學期主要目標在透過網路操控機械手臂，目前已經可以用Coppliasim完成模擬。</div>
-<div>同時也學會了用其他的程式建立自己的網頁，透過其他網頁來展示自己目前的進度。</div>
-<div>希望後面的線上課程不會有太多的問題。</div>
-</div>
-</div>
-</div>
-<h2>run</h2>
-<script src="/get_page/run/cmsimde_site_files/brython.js.下載">
-</script>
-<script src="/get_page/run/cmsimde_site_files/brython_stdlib.js.下載"></script>
-<!-- for ggame -->
-<p>
-<script src="/get_page/run/cmsimde_site_files/jquery-3.3.1.min.js(1).下載"></script>
-<script src="/get_page/run/cmsimde_site_files/jquery-ui.1.12.1.min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/pixi-3.0.5.min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/buzz-1.2.1.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/bs.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/brython_modules.js.下載"></script>
-</p>
-<!-- Cango 程式庫 -->
-<p>
-<script src="/get_page/run/cmsimde_site_files/Cango-24v03-min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/CangoAxes-6v01-min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/gearUtils-09.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/SVGpathUtils-6v03-min.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/sylvester.js.下載"></script>
-<script src="/get_page/run/cmsimde_site_files/PrairieDraw.js.下載"></script>
-</p>
-<!-- for Konva 程式庫 -->
-<p>
-<script src="/get_page/run/cmsimde_site_files/konva.min.js.下載"></script>
-<script>
-window.onload=function(){
-brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
-}
-</script>
-</p>
-<p><!-- 導入 FileSaver 與 filereader --></p>
-<p>
-<script src="/get_page/run/cmsimde_site_files/FileSaver.min.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/filereader.js.下載" type="text/javascript"></script>
-</p>
-<p><!-- 導入 ace --></p>
-<p>
-<script src="/get_page/run/cmsimde_site_files/ace.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/ext-language_tools.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/mode-python3.js.下載" type="text/javascript"></script>
-<script src="/get_page/run/cmsimde_site_files/python.js.下載" type="text/javascript"></script>
-</p>
-<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
-<p>
-<script type="text/javascript">
-function doSave(storage_id, filename){
-    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
-    filename = document.getElementById(filename).value
-    saveAs(blob, filename+".py");
-}
-</script>
-</p>
-<p><!-- 印出版次與關鍵字程式 --></p>
-<p>
-<script type="text/python3">
-from browser import document as doc
-import ace
-
-# 清除畫布
-def clear_bd1(ev):
-    bd = doc["brython_div1"]
-    bd.clear()
-
-# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
-Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
-
-class button2:
-    def __init__(self, url):
-        self.url = url
-
-    # 記得加入 event 輸入變數
-    def do(self,ev):
-        Ace2.editor.setValue(open(self.url).read())
-        Ace2.editor.scrollToRow(0)
-        Ace2.editor.gotoLine(0)
-        Ace2.run()
-
-################################## grp_2022 start
-# for 2b
-grp_2022_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/c7043ac81005b069c58080c1222fe30048d588cb/grp_2022.py"
-grp_2022 = button2(grp_2022_url)
-doc["grp_2022"].bind("click", grp_2022.do)
-################################## grp_2022 end
-################################## grp2a_2022 start
-# for 2a
-grp2a_2022_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/b78b018f841326f9c8d0ef2391cb5898fa9aaf87/grp2a_2022.py"
-grp2a_2022 = button2(grp2a_2022_url)
-doc["grp2a_2022"].bind("click", grp2a_2022.do)
-################################## grp2a_2022 end
-</script>
-</p>
-<p><button id="grp2a_2022">grp2a_2022</button><button id="grp_2022">grp_2022</button></p>
-<p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor" style="width: 600px; height: 300px;"></div>
-<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
-<!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
-<p></p>
-<!-- 執行與清除按鈕開始 -->
-<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
-<!-- 執行與清除按鈕結束 -->
-<p></p>
-<!-- 程式執行 ouput 區 -->
-<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
-<!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
-<div id="brython_div"></div>
-<!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
-<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
-<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
-<p></p>
-<h1>midterm</h1>
-<p><a href="https://40923218.github.io/cd2022/reveal/index.html">兩周進度簡報</a></p>
-<p>Arm機構做動</p>
-<p></p>
-<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/Arm.mp4" width="560"></iframe></p>
-<hr/>
-<p><strong>零件繪圖</strong></p>
-<p></p>
-<table style="width: 100%; height: 100%;">
-<tbody>
-<tr>
-<td style="width: 0px; text-align: center;">導光件</td>
-<td style="width: 0px; text-align: center;">電機軸承支撐左側</td>
-<td style="width: 0px; text-align: center;">電機軸承支撐右側</td>
-</tr>
-<tr>
-<td style="width: 0px;">
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/glVGP1RIzNQ" title="YouTube video player" width="640"></iframe></p>
-</td>
-<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/QEtO1yfH0dM" title="YouTube video player" width="640"></iframe></td>
-<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/dlGmwjUMqRI" title="YouTube video player" width="640"></iframe></td>
-</tr>
-</tbody>
-</table>
-<p></p>
-<hr/>
-<p></p>
-<table style="width: 100%; height: 100%;">
-<tbody>
-<tr>
-<td style="width: 0px; text-align: center;">電源按鍵</td>
-<td style="width: 0px; text-align: center;">底座上蓋 貼紙</td>
-<td style="width: 0px; text-align: center;">6*2 5磁鐵</td>
-</tr>
-<tr>
-<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/A4CZAHRkUTY" title="YouTube video player" width="640"></iframe></td>
-<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/uje_rySVEzw" title="YouTube video player" width="640"></iframe></td>
-<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/nvZZteU93nk" title="YouTube video player" width="640"></iframe></td>
-</tr>
-</tbody>
-</table>
-<p></p>
 <h1>W10任務</h1>
 <h2>w10_block_ui</h2>
 <p>流程Wink</p>
@@ -2576,6 +1291,1292 @@ M3X5 圆头黑色十字螺丝
 全部零件採 Steel 製, 總重量約 4.1062kg
 ************************************************************</pre>
 <div></div>
+<h1>online</h1>
+<h2>MTB</h2>
+<p><a href="/downloads/MTB.7z">MTB零組件</a></p>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923218.github.io/cd2022/downloads/MTB.mp4" video="mp4" width="640"></iframe></p>
+<h2>Arm機構做動</h2>
+<p></p>
+<p><br/><br/><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923218.github.io/cd2022/downloads/Arm.mp4" width="640"></iframe></p>
+<h2>tic-tae-toe</h2>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923221.github.io/cd2022/downloads/OOXX.mp4" video="mp4" width="640"></iframe></p>
+<h2>W1~W17</h2>
+<p><a href="https://40923218.github.io/cd2022/content/midterm.html">機構做動</a></p>
+<p>自上學期延伸下來的，上學期做過meArm之後，這次做這個比較得心應手，除了在樹狀圖編排上面比較花時間，編排完之後做模擬編排比較快，總計共兩個小時做完</p>
+<p></p>
+<p><a href="https://40923218.github.io/cd2022/content/w10_block_ui.html">w10</a></p>
+<p>用NX一段時間我才知道原來UI是可以自己做的，讓我知道他不僅僅是個CAD軟體</p>
+<p></p>
+<p><a href="https://40923218.github.io/cd2022/content/w12.html">w12</a></p>
+<p>研究了一下程式碼之後，順利導出了</p>
+<p></p>
+<h1>w14</h1>
+<table style="width: 100%;">
+<tbody>
+<tr style="height: 100%;">
+<td style="height: 100%; width: 0px;">55按键帽（短）</td>
+<td style="height: 100%; width: 0px;">56轴承支撑轴</td>
+<td style="height: 100%; width: 0px;">57轴承支撑圈</td>
+</tr>
+<tr style="height: 100%;">
+<td style="height: 100%; width: 33.3%;"><img alt="" height="auto" src="/images/55按键帽（短）(2D).png" width="70%"/></td>
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/56轴承支撑轴(2D).png" width="70%"/></td>
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/57轴承支撑圈(2D).png" width="70%"/></td>
+</tr>
+<tr style="height: 100%;">
+<td style="height: 100%; width: 0px;">58减速箱上壳（两侧）</td>
+<td style="height: 100%; width: 0px;">59减速箱下壳（两侧电机）</td>
+<td style="height: 100%; width: 0px;">60铰链</td>
+</tr>
+<tr style="height: 100%;">
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/58减速箱上壳（两侧）(2D).png" width="70%"/></td>
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/59减速箱下壳（两侧电机）(2D).png" width="70%"/></td>
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/60铰链(2D).png" width="70%"/></td>
+</tr>
+<tr style="height: 100%;">
+<td style="height: 100%; width: 0px;">61塑料盖板</td>
+<td style="height: 100%; width: 0px;">62输出轴（两侧电机）</td>
+<td style="height: 100%; width: 0px;">63磁编码器PCB</td>
+</tr>
+<tr style="height: 100%;">
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/61塑料盖板(2D).png" width="70%"/></td>
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/62输出轴（两侧电机）(2D).png" width="70%"/></td>
+<td style="height: 100%; width: 33.3%;"><img caption="false" height="auto" src="/images/63磁编码器PCB(2D).png" width="70%"/></td>
+</tr>
+</tbody>
+</table>
+<h1>w15</h1>
+<table style="width: 100%; height: auto;">
+<tbody>
+<tr>
+<td>動態模擬</td>
+<td>操作模擬</td>
+</tr>
+<tr style="height: 100%; width: 100%;">
+<td style="height: 100%; width: 66%;">
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://40923221.github.io/cd2022/downloads/w15.mp4" video="mp4" width="640"></iframe></p>
+</td>
+<td style="height: 100%; width: 34%;">
+<p>k 逆時針轉動</p>
+<p>i順時針轉動</p>
+<p>h 往前移動</p>
+<p>j 往後移動</p>
+<p>f 往下移動</p>
+<p>g 往上移動</p>
+<p>p 吸起</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>程式碼(僅供參考)</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">function sysCall_init()
+    axis1=sim.getObject('/motor1')
+    axis2=sim.getObject('/motor2')
+    axis3=sim.getObject('/motor6')
+    suctionPad=sim.getObject('/suctionPad')
+    rotation1 = 0
+    rotation2 = 0
+    rotation3 = 0
+    deg = math.pi/180.
+    enableSuctionPad(true)
+end
+function enableSuctionPad(enable)
+    -- use the suctionPad object to pass the variable activity value
+    -- if enable = true, the activity = 'on'
+    if enable then
+        sim.writeCustomDataBlock(suctionPad,'activity','on')
+    else
+        sim.writeCustomDataBlock(suctionPad,'activity','off')
+    end
+end
+function sysCall_actuation() 
+--[[
+    rotation1 = rotation1 + 1*deg
+    print(rotation1)
+    sim.setJointPosition(axis1, -rotation1)
+    sim.setJointPosition(axis2, -rotation1)
+]]
+    message, auxiliaryData=sim.getSimulatorMessage()
+    while message ~= -1 do
+        key=auxiliaryData[1]
+        sim.addStatusbarMessage('user press key:'..key)
+        if (message==sim.message_keypress) then
+           --if (auxiliaryData[1]==112) then --p activate the suction pad
+            if (auxiliaryData[1]==string.byte('p')) then
+                -- if key p pressed activate the suction mode
+--sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','true')
+                enableSuctionPad(true)
+            end -- if p
+            if (auxiliaryData[1]==string.byte('q')) then --q deactivate the suction pad
+                -- if key q pressed deactivate the suction mode
+--sim.setScriptSimulationParameter(sim.getScriptAssociatedWithObject(suctionPad),'active','false')
+                enableSuctionPad(false)
+            end -- if q
+            if (auxiliaryData[1]==string.byte('k')) then --k right turn in degree
+                -- if key k pressed axis1 angle adds 2 degrees
+                 rotation1 = rotation1 + 1*deg
+                 --sim.setJointPosition(axis1, rotation1)
+                 sim.setJointTargetPosition(axis1, rotation1)
+            end -- if k
+            if (auxiliaryData[1]==string.byte('l')) then --l left turn in degree
+                -- if key l pressed axis1 angle substract 2 degrees
+                 rotation1 = rotation1 - 1*deg
+                 --sim.setJointPosition(axis1, rotation1)
+                 sim.setJointTargetPosition(axis1, rotation1)
+            end -- if l
+-- for joint2 start ##########################################################
+            if (auxiliaryData[1]== string.byte("h")) then --r right turn in degree
+                -- if key r pressed axis1 angle adds 2 degrees
+                 rotation2 = rotation2 + 1*deg
+                 --sim.setJointPosition(axis2, rotation2)
+                 sim.setJointTargetPosition(axis2, rotation2)
+            end -- if k
+            if (auxiliaryData[1]==string.byte("j")) then
+                -- if key j pressed axis2 angle substract 2 degrees
+                 rotation2 = rotation2 - 1*deg
+                 --sim.setJointPosition(axis2, rotation2)
+                 sim.setJointTargetPosition(axis2, rotation2)
+            end -- if j
+-- for joint2 end ##########################################################
+-- for joint3 start ##########################################################
+            if (auxiliaryData[1]== string.byte("f")) then
+                -- if key f pressed axis3 angle adds 2 degrees
+                 rotation3 = rotation3 + 1*deg
+                 --sim.setJointPosition(axis3, rotation3)
+                 sim.setJointTargetPosition(axis3, rotation3)
+            end -- if f
+            if (auxiliaryData[1]==string.byte("g")) then
+                -- if key g pressed axis3 angle substract 2 degrees
+                 rotation3 = rotation3 - 1*deg
+                 --sim.setJointPosition(axis3, rotation3)
+                 sim.setJointTargetPosition(axis3, rotation3)
+            end -- if g
+-- for joint2 end ##########################################################
+            if (auxiliaryData[1]==100) then --d suction pad down
+                -- if key d pressed axis3 will down 0.05 m
+                 distance3 = distance3 - 0.05
+                 sim.setJointPosition(axis3, distance3)
+            end -- if d
+            if (auxiliaryData[1]==117) then --u suction pad up
+                -- if key u pressed axis3 will up 0.05 m
+                 distance3 = distance3 + 0.05
+                 sim.setJointPosition(axis3, distance3)
+            end -- if u
+            if (auxiliaryData[1]==99) then --c coordinate of block
+                blockPosition = sim.getObjectPosition(block, BaseFrame)
+                sim.addStatusbarMessage("coordinate:"..table_to_string(blockPosition))
+            end --if c
+       end  -- if
+    message, auxiliaryData=sim.getSimulatorMessage()
+    end -- while
+end -- function
+ 
+function sysCall_sensing() 
+--[[
+    -- Read Proximity sensor (0= nothing detected, 1 = object detected)
+    local res = sim.readProximitySensor(proximity)
+ 
+    -- Check if possible to insert an new box
+    if (sim.getSimulationTime()-T_last_inserted &gt; T_insert) and not hasStopped then
+        insertBox()
+    end
+ 
+    -- If proximity sensor detects an object, stop the belt, stop inserting objects
+    if res == 1 and not hasStopped then
+        if boolList[1] then
+            sim.setScriptSimulationParameter(sim.handle_self,"conveyorBeltVelocity",0)
+            deltaTime = sim.getSimulationTime()-T_last_inserted
+            hasStopped = true
+        else
+            local box = table.remove(boxList,1)
+            local boxDummy = table.remove(boxDummyList,1)
+            table.remove(boolList,1)
+ 
+            sim.removeObject(box)
+            sim.removeObject(boxDummy)
+        end
+    end
+ 
+    -- If proximity sensor detects nothing and belt has stopped, start belt, continue inserting
+    if res == 0 and hasStopped then
+        sim.setScriptSimulationParameter(sim.handle_self,"conveyorBeltVelocity",beltSpeed)
+        hasStopped = false
+        T_last_inserted = sim.getSimulationTime()-deltaTime
+    end
+     
+]]--
+end
+function sysCall_sensing()
+    -- put your sensing code here
+end
+function sysCall_cleanup()
+    -- do some clean-up here
+end
+-- Convert a lua table into a lua syntactically correct string
+function table_to_string(tbl)
+    local result = "{"
+    for k, v in pairs(tbl) do
+        -- Check the key type (ignore any numerical keys - assume its an array)
+        if type(k) == "string" then
+            result = result.."[\""..k.."\"]".."="
+        end
+        -- Check the value type
+        if type(v) == "table" then
+            result = result..table_to_string(v)
+        elseif type(v) == "boolean" then
+            result = result..tostring(v)
+        else
+            v = round(v, 4)
+            result = result.."\""..v.."\""
+        end
+        result = result..","
+    end
+    -- Remove leading commas from the result
+    if result ~= "" then
+        result = result:sub(1, result:len()-1)
+    end
+    return result.."}"
+end
+function round(x, n)
+    n = math.pow(10, n or 0)
+    x = x * n
+    if x &gt;= 0 then x = math.floor(x + 0.5) else x = math.ceil(x - 0.5) end
+    return x / n
+end
+function insertBox()
+    -- Generate random numbers
+    local rand1 = math.random()
+    local rand2 = math.random()
+    local rand3 = math.random()
+    -- Generate random disturbances on position and orientation
+    local dx = (2*rand1-1)*0.1
+    local dy = (2*rand2-1)*0.1
+    local dphi = (2*rand3-1)*0.5
+    local disturbedCoordinates = {0,0,0}
+    disturbedCoordinates[1] = insertCoordinate[1]+dx
+    disturbedCoordinates[2] = insertCoordinate[2]+dy
+    disturbedCoordinates[3] = insertCoordinate[3]
+    -- Copy and paste box and boxDummy
+    local insertedObjects = sim.copyPasteObjects({box,boxDummy},0)
+    -- Update last inserted box time
+    T_last_inserted = sim.getSimulationTime()
+    -- Move and rotate
+    sim.setObjectPosition(insertedObjects[1],-1,disturbedCoordinates)
+    sim.setObjectOrientation(insertedObjects[1],-1,{0,0,dphi})
+    -- Store handles to boxes and dummies
+    table.insert(boxList,insertedObjects[1])
+    table.insert(boxDummyList,insertedObjects[2]) 
+    -- Decide if object is good or bad
+    local decision = math.random() 
+    if decision &lt;= goodPercentage then
+    -- Object is good, assign goodColor
+        sim.setShapeColor(insertedObjects[1],nil,sim.colorcomponent_ambient_diffuse,goodColor)
+        table.insert(boolList,true)
+    else
+    -- Object is bad, assign random color
+        sim.setShapeColor(insertedObjects[1],nil,sim.colorcomponent_ambient_diffuse,{rand1,rand2,rand3})
+        table.insert(boolList,false)
+    end
+end
+-- See the user manual or the available code snippets for additional callback functions and details</pre>
+<p><br/><br/><br/></p>
+<h1>w16</h1>
+<p><img alt="" height="820" src="/images/w16.jpg" width="556"/></p>
+<h1>homepage</h1>
+<p>兩班成員名單</p>
+<h2>四設二甲</h2>
+<table height="50" width="100%">
+<tbody>
+<tr>
+<td><span>學號</span></td>
+<td><span>倉儲</span></td>
+<td><span>網頁</span></td>
+<td><span>組別</span></td>
+</tr>
+<tr>
+<td><span>40623143</span><span><br/></span></td>
+<td><a href="https://github.com/40623143/cd2022">40623143</a></td>
+<td><a href="https://40623143.github.io/cd2022/content/index.html">40623143</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40823132</span><span><br/></span></td>
+<td><a href="https://github.com/40823132/cd2022">40823132</a></td>
+<td><a href="https://40823132.github.io/cd2022/content/index.html">40823132</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40823143</span><span><br/></span></td>
+<td><a href="https://github.com/40823143/cd2022">40823143</a></td>
+<td><a href="https://40823143.github.io/cd2022/content/index.html">40823143</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923101</span><span><br/></span></td>
+<td><a href="https://github.com/a40923101/cd2022">a40923101</a></td>
+<td><a href="https://a40923101.github.io/cd2022/content/index.html">a40923101</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923102</span><span><br/></span></td>
+<td><a href="https://github.com/40923102/cd2022">40923102</a></td>
+<td><a href="https://40923102.github.io/cd2022/content/index.html">40923102</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923103</span><span><br/></span></td>
+<td><a href="https://github.com/40923103/cd2022">40923103</a></td>
+<td><a href="https://40923103.github.io/cd2022/content/index.html">40923103</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923104</span><span><br/></span></td>
+<td><a href="https://github.com/409231044/cd2022">409231044</a></td>
+<td><a href="https://409231044.github.io/cd2022/content/index.html">409231044</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923105</span><span><br/></span></td>
+<td><a href="https://github.com/40923105/cd2022">40923105</a></td>
+<td><a href="https://40923105.github.io/cd2022/content/index.html">40923105</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923106</span><span><br/></span></td>
+<td><a href="https://github.com/40923106/cd2022">40923106</a></td>
+<td><a href="https://40923106.github.io/cd2022/content/index.html">40923106</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923107</span><span><br/></span></td>
+<td><a href="https://github.com/40923107/cd2022">40923107</a></td>
+<td><a href="https://40923107.github.io/cd2022/content/index.html">40923107</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923108</span><span><br/></span></td>
+<td><a href="https://github.com/40923108/cd2022">40923108</a></td>
+<td><a href="https://40923108.github.io/cd2022/content/index.html">40923108</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923109</span><span><br/></span></td>
+<td><a href="https://github.com/CYC40923109/cd2022">CYC40923109</a></td>
+<td><a href="https://CYC40923109.github.io/cd2022/content/index.html">CYC40923109</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923110</span><span><br/></span></td>
+<td><a href="https://github.com/40923110/cd2022">40923110</a></td>
+<td><a href="https://40923110.github.io/cd2022/content/index.html">40923110</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923111</span><span><br/></span></td>
+<td><a href="https://github.com/40923111/cd2022">40923111</a></td>
+<td><a href="https://40923111.github.io/cd2022/content/index.html">40923111</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923113</span><span><br/></span></td>
+<td><a href="https://github.com/40923113/cd2022">40923113</a></td>
+<td><a href="https://40923113.github.io/cd2022/content/index.html">40923113</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923114</span><span><br/></span></td>
+<td><a href="https://github.com/40923114/cd2022">40923114</a></td>
+<td><a href="https://40923114.github.io/cd2022/content/index.html">40923114</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923115</span><span><br/></span></td>
+<td><a href="https://github.com/jason60714/cd2022">jason60714</a></td>
+<td><a href="https://jason60714.github.io/cd2022/content/index.html">jason60714</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923116</span><span><br/></span></td>
+<td><a href="https://github.com/40923116/cd2022">40923116</a></td>
+<td><a href="https://40923116.github.io/cd2022/content/index.html">40923116</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923117</span><span><br/></span></td>
+<td><a href="https://github.com/Maxlee999/cd2022">Maxlee999</a></td>
+<td><a href="https://Maxlee999.github.io/cd2022/content/index.html">Maxlee999</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923118</span><span><br/></span></td>
+<td><a href="https://github.com/40923118/cd2022">40923118</a></td>
+<td><a href="https://40923118.github.io/cd2022/content/index.html">40923118</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923119</span><span><br/></span></td>
+<td><a href="https://github.com/40923119/cd2022">40923119</a></td>
+<td><a href="https://40923119.github.io/cd2022/content/index.html">40923119</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923120</span><span><br/></span></td>
+<td><a href="https://github.com/40923120/cd2022">40923120</a></td>
+<td><a href="https://40923120.github.io/cd2022/content/index.html">40923120</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923121</span><span><br/></span></td>
+<td><a href="https://github.com/40923121/cd2022">40923121</a></td>
+<td><a href="https://40923121.github.io/cd2022/content/index.html">40923121</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923122</span><span><br/></span></td>
+<td><a href="https://github.com/40923122/cd2022">40923122</a></td>
+<td><a href="https://40923122.github.io/cd2022/content/index.html">40923122</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923123</span><span><br/></span></td>
+<td><a href="https://github.com/40923123/cd2022">40923123</a></td>
+<td><a href="https://40923123.github.io/cd2022/content/index.html">40923123</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923124</span><span><br/></span></td>
+<td><a href="https://github.com/40923124/cd2022">40923124</a></td>
+<td><a href="https://40923124.github.io/cd2022/content/index.html">40923124</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923125</span><span><br/></span></td>
+<td><a href="https://github.com/40923125/cd2022">40923125</a></td>
+<td><a href="https://40923125.github.io/cd2022/content/index.html">40923125</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923126</span><span><br/></span></td>
+<td><a href="https://github.com/40923126-1/cd2022">40923126-1</a></td>
+<td><a href="https://40923126-1.github.io/cd2022/content/index.html">40923126-1</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923127</span><span><br/></span></td>
+<td><a href="https://github.com/40923127-1/cd2022">40923127-1</a></td>
+<td><a href="https://40923127-1.github.io/cd2022/content/index.html">40923127-1</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923128</span><span><br/></span></td>
+<td><a href="https://github.com/40923128/cd2022">40923128</a></td>
+<td><a href="https://40923128.github.io/cd2022/content/index.html">40923128</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923129</span><span><br/></span></td>
+<td><a href="https://github.com/40923129/cd2022">40923129</a></td>
+<td><a href="https://40923129.github.io/cd2022/content/index.html">40923129</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923130</span><span><br/></span></td>
+<td><a href="https://github.com/40923130/cd2022">40923130</a></td>
+<td><a href="https://40923130.github.io/cd2022/content/index.html">40923130</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923131</span><span><br/></span></td>
+<td><a href="https://github.com/40923131/cd2022">40923131</a><br/><a href="https://github.com//cd2022"></a></td>
+<td><a href="https://40923131.github.io/cd2022/content/index.html">40923131</a><br/><a href="https://.github.io/cd2022/content/index.html"></a></td>
+<td></td>
+</tr>
+<tr>
+<td><span>40923133</span><span><br/></span></td>
+<td><a href="https://github.com/40923133/cd2022">40923133</a></td>
+<td><a href="https://40923133.github.io/cd2022/content/index.html">40923133</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923134</span><span><br/></span></td>
+<td><a href="https://github.com/40923134/cd2022">40923134</a></td>
+<td><a href="https://40923134.github.io/cd2022/content/index.html">40923134</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923135</span><span><br/></span></td>
+<td><a href="https://github.com/40923135/cd2022">40923135</a></td>
+<td><a href="https://40923135.github.io/cd2022/content/index.html">40923135</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923136</span><span><br/></span></td>
+<td><a href="https://github.com/40923136-1/cd2022">40923136-1</a></td>
+<td><a href="https://40923136-1.github.io/cd2022/content/index.html">40923136-1</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923137</span><span><br/></span></td>
+<td><a href="https://github.com/s40923137/cd2022">s40923137</a></td>
+<td><a href="https://s40923137.github.io/cd2022/content/index.html">s40923137</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923138</span><span><br/></span></td>
+<td><a href="https://github.com/40923138/cd2022">40923138</a><br/><a href="https://github.com//cd2022"></a></td>
+<td><a href="https://40923138.github.io/cd2022/content/index.html">40923138</a><br/><a href="https://.github.io/cd2022/content/index.html"></a></td>
+<td></td>
+</tr>
+<tr>
+<td><span>40923139</span><span><br/></span></td>
+<td><a href="https://github.com/40923139/cd2022">40923139</a></td>
+<td><a href="https://40923139.github.io/cd2022/content/index.html">40923139</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923140</span><span><br/></span></td>
+<td><a href="https://github.com/40923140/cd2022">40923140</a></td>
+<td><a href="https://40923140.github.io/cd2022/content/index.html">40923140</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923142</span><span><br/></span></td>
+<td><a href="https://github.com/40923142/cd2022">40923142</a></td>
+<td><a href="https://40923142.github.io/cd2022/content/index.html">40923142</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923143</span><span><br/></span></td>
+<td><a href="https://github.com/40923143/cd2022">40923143</a></td>
+<td><a href="https://40923143.github.io/cd2022/content/index.html">40923143</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923144</span><span><br/></span></td>
+<td><a href="https://github.com/40923144/cd2022">40923144</a></td>
+<td><a href="https://40923144.github.io/cd2022/content/index.html">40923144</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923145</span><span><br/></span></td>
+<td><a href="https://github.com/40923145/cd2022">40923145</a></td>
+<td><a href="https://40923145.github.io/cd2022/content/index.html">40923145</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923146</span><span><br/></span></td>
+<td><a href="https://github.com/a40923146/cd2022">a40923146</a></td>
+<td><a href="https://a40923146.github.io/cd2022/content/index.html">a40923146</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923147</span><span><br/></span></td>
+<td><a href="https://github.com/40923147/cd2022">40923147</a></td>
+<td><a href="https://40923147.github.io/cd2022/content/index.html">40923147</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923148</span><span><br/></span></td>
+<td><a href="https://github.com/40923148/cd2022">40923148</a></td>
+<td><a href="https://40923148.github.io/cd2022/content/index.html">40923148</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923149</span><span><br/></span></td>
+<td><a href="https://github.com/40923149r/cd2022">40923149r</a></td>
+<td><a href="https://40923149r.github.io/cd2022/content/index.html">40923149r</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923150</span><span><br/></span></td>
+<td><a href="https://github.com/40923150/cd2022">40923150</a></td>
+<td><a href="https://40923150.github.io/cd2022/content/index.html">40923150</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923151</span><span><br/></span></td>
+<td><a href="https://github.com/40923151/cd2022">40923151</a></td>
+<td><a href="https://40923151.github.io/cd2022/content/index.html">40923151</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923152</span><span><br/></span></td>
+<td><a href="https://github.com/40923152/cd2022">40923152</a></td>
+<td><a href="https://40923152.github.io/cd2022/content/index.html">40923152</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923153</span><span><br/></span></td>
+<td><a href="https://github.com/40923153/cd2022">40923153</a></td>
+<td><a href="https://40923153.github.io/cd2022/content/index.html">40923153</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923154</span><span><br/></span></td>
+<td><a href="https://github.com/40923154/cd2022">40923154</a></td>
+<td><a href="https://40923154.github.io/cd2022/content/index.html">40923154</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923156</span><span><br/></span></td>
+<td><a href="https://github.com/ZHILIN-0817/cd2022">ZHILIN-0817</a></td>
+<td><a href="https://ZHILIN-0817.github.io/cd2022/content/index.html">ZHILIN-0817</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923157</span><span><br/></span></td>
+<td><a href="https://github.com/40923157/cd2022">40923157</a><br/><a href="https://github.com//cd2022"></a></td>
+<td><a href="https://40923157.github.io/cd2022/content/index.html">40923157</a><br/><a href="https://.github.io/cd2022/content/index.html"></a></td>
+<td></td>
+</tr>
+<tr>
+<td><span>40971134</span><span><br/></span></td>
+<td><a href="https://github.com/40971134/cd2022">40971134</a></td>
+<td><a href="https://40971134.github.io/cd2022/content/index.html">40971134</a></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2>四設二乙</h2>
+<p></p>
+<table height="50" width="100%">
+<tbody>
+<tr>
+<td><span>學號</span></td>
+<td><span>倉儲</span></td>
+<td><span>網頁</span></td>
+<td><span>組別</span></td>
+</tr>
+<tr>
+<td><span>40623143</span><span><br/></span></td>
+<td><a href="https://github.com/40623143/cd2022">40623143</a></td>
+<td><a href="https://40623143.github.io/cd2022/content/index.html">40623143</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40723134</span><span><br/></span></td>
+<td><a href="https://github.com/40723134/cd2022">40723134</a></td>
+<td><a href="https://40723134.github.io/cd2022/content/index.html">40723134</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40723136</span><span><br/></span></td>
+<td><a href="https://github.com/s40723136/cd2022">s40723136</a></td>
+<td><a href="https://s40723136.github.io/cd2022/content/index.html">s40723136</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40723146</span><span><br/></span></td>
+<td><a href="https://github.com/40723146/cd2022">40723146</a></td>
+<td><a href="https://40723146.github.io/cd2022/content/index.html">40723146</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40723217</span><span><br/></span></td>
+<td><a href="https://github.com/40723217/cd2022">40723217</a></td>
+<td><a href="https://40723217.github.io/cd2022/content/index.html">40723217</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40732331</span><span><br/></span></td>
+<td><a href="https://github.com/40732331/cd2022">40732331</a></td>
+<td><a href="https://40732331.github.io/cd2022/content/index.html">40732331</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40823215</span><span><br/></span></td>
+<td><a href="https://github.com/40823215/cd2022">40823215</a></td>
+<td><a href="https://40823215.github.io/cd2022/content/index.html">40823215</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923201</span><span><br/></span></td>
+<td><a href="https://github.com/40923201/cd2022">40923201</a></td>
+<td><a href="https://40923201.github.io/cd2022/content/index.html">40923201</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923203</span><span><br/></span></td>
+<td><a href="https://github.com/youshin40923203/cd2022">youshin40923203</a></td>
+<td><a href="https://youshin40923203.github.io/cd2022/content/index.html">youshin40923203</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923204</span><span><br/></span></td>
+<td><a href="https://github.com/40923204/cd2022">40923204</a></td>
+<td><a href="https://40923204.github.io/cd2022/content/index.html">40923204</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923205</span><span><br/></span></td>
+<td><a href="https://github.com/40923205/cd2022">40923205</a></td>
+<td><a href="https://40923205.github.io/cd2022/content/index.html">40923205</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923206</span><span><br/></span></td>
+<td><a href="https://github.com/40923206-1/cd2022">40923206-1</a></td>
+<td><a href="https://40923206-1.github.io/cd2022/content/index.html">40923206-1</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923207</span><span><br/></span></td>
+<td><a href="https://github.com/40923207/cd2022">40923207</a></td>
+<td><a href="https://40923207.github.io/cd2022/content/index.html">40923207</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923208</span><span><br/></span></td>
+<td><a href="https://github.com/nfu40923208/cd2022">nfu40923208</a></td>
+<td><a href="https://nfu40923208.github.io/cd2022/content/index.html">nfu40923208</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923209</span><span><br/></span></td>
+<td><a href="https://github.com/nfu40923209/cd2022">nfu40923209</a></td>
+<td><a href="https://nfu40923209.github.io/cd2022/content/index.html">nfu40923209</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923210</span><span><br/></span></td>
+<td><a href="https://github.com/40923210/cd2022">40923210</a></td>
+<td><a href="https://40923210.github.io/cd2022/content/index.html">40923210</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923211</span><span><br/></span></td>
+<td><a href="https://github.com/a40923211/cd2022">a40923211</a></td>
+<td><a href="https://a40923211.github.io/cd2022/content/index.html">a40923211</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923212</span><span><br/></span></td>
+<td><a href="https://github.com/40923212/cd2022">40923212</a></td>
+<td><a href="https://40923212.github.io/cd2022/content/index.html">40923212</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923213</span><span><br/></span></td>
+<td><a href="https://github.com/40923213/cd2022">40923213</a></td>
+<td><a href="https://40923213.github.io/cd2022/content/index.html">40923213</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923214</span><span><br/></span></td>
+<td><a href="https://github.com/40923214/cd2022">40923214</a></td>
+<td><a href="https://40923214.github.io/cd2022/content/index.html">40923214</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923216</span><span><br/></span></td>
+<td><a href="https://github.com/40923216/cd2022">40923216</a></td>
+<td><a href="https://40923216.github.io/cd2022/content/index.html">40923216</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923217</span><span><br/></span></td>
+<td><a href="https://github.com/40923217/cd2022">40923217</a></td>
+<td><a href="https://40923217.github.io/cd2022/content/index.html">40923217</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923218</span><span><br/></span></td>
+<td><a href="https://github.com/40923218/cd2022">40923218</a></td>
+<td><a href="https://40923218.github.io/cd2022/content/index.html">40923218</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923219</span><span><br/></span></td>
+<td><a href="https://github.com/nfu40923219/cd2022">nfu40923219</a></td>
+<td><a href="https://nfu40923219.github.io/cd2022/content/index.html">nfu40923219</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923220</span><span><br/></span></td>
+<td><a href="https://github.com/40923220/cd2022">40923220</a></td>
+<td><a href="https://40923220.github.io/cd2022/content/index.html">40923220</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923221</span><span><br/></span></td>
+<td><a href="https://github.com/40923221/cd2022">40923221</a></td>
+<td><a href="https://40923221.github.io/cd2022/content/index.html">40923221</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923223</span><span><br/></span></td>
+<td><a href="https://github.com/40923223/cd2022">40923223</a></td>
+<td><a href="https://40923223.github.io/cd2022/content/index.html">40923223</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923224</span><span><br/></span></td>
+<td><a href="https://github.com/s40923224/cd2022">s40923224</a></td>
+<td><a href="https://s40923224.github.io/cd2022/content/index.html">s40923224</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923225</span><span><br/></span></td>
+<td><a href="https://github.com/40923225/cd2022">40923225</a></td>
+<td><a href="https://40923225.github.io/cd2022/content/index.html">40923225</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923226</span><span><br/></span></td>
+<td><a href="https://github.com/40923226/cd2022">40923226</a></td>
+<td><a href="https://40923226.github.io/cd2022/content/index.html">40923226</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923227</span><span><br/></span></td>
+<td><a href="https://github.com/40923227/cd2022">40923227</a></td>
+<td><a href="https://40923227.github.io/cd2022/content/index.html">40923227</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923228</span><span><br/></span></td>
+<td><a href="https://github.com/40923228/cd2022">40923228</a></td>
+<td><a href="https://40923228.github.io/cd2022/content/index.html">40923228</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923229</span><span><br/></span></td>
+<td><a href="https://github.com/40923229/cd2022">40923229</a></td>
+<td><a href="https://40923229.github.io/cd2022/content/index.html">40923229</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923230</span><span><br/></span></td>
+<td><a href="https://github.com/40923230/cd2022">40923230</a></td>
+<td><a href="https://40923230.github.io/cd2022/content/index.html">40923230</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923231</span><span><br/></span></td>
+<td><a href="https://github.com/40923231/cd2022">40923231</a></td>
+<td><a href="https://40923231.github.io/cd2022/content/index.html">40923231</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923232</span><span><br/></span></td>
+<td><a href="https://github.com/40923232/cd2022">40923232</a></td>
+<td><a href="https://40923232.github.io/cd2022/content/index.html">40923232</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923233</span><span><br/></span></td>
+<td><a href="https://github.com/40923233/cd2022">40923233</a></td>
+<td><a href="https://40923233.github.io/cd2022/content/index.html">40923233</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923234</span><span><br/></span></td>
+<td><a href="https://github.com/40923234/cd2022">40923234</a></td>
+<td><a href="https://40923234.github.io/cd2022/content/index.html">40923234</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923235</span><span><br/></span></td>
+<td><a href="https://github.com/40923235/cd2022">40923235</a></td>
+<td><a href="https://40923235.github.io/cd2022/content/index.html">40923235</a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><span>40923236</span><span><br/></span></td>
+<td><a href="https://github.com/40923236/cd2022">40923236</a></td>
+<td><a href="https://40923236.github.io/cd2022/content/index.html">40923236</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923237</span><span><br/></span></td>
+<td><a href="https://github.com/40923237/cd2022">40923237</a></td>
+<td><a href="https://40923237.github.io/cd2022/content/index.html">40923237</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923238</span><span><br/></span></td>
+<td><a href="https://github.com/40923238/cd2022">40923238</a></td>
+<td><a href="https://40923238.github.io/cd2022/content/index.html">40923238</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923240</span><span><br/></span></td>
+<td><a href="https://github.com/40923240/cd2022">40923240</a></td>
+<td><a href="https://40923240.github.io/cd2022/content/index.html">40923240</a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><span>40923241</span><span><br/></span></td>
+<td><a href="https://github.com/40923241/cd2022">40923241</a></td>
+<td><a href="https://40923241.github.io/cd2022/content/index.html">40923241</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923242</span><span><br/></span></td>
+<td><a href="https://github.com/40923242/cd2022">40923242</a></td>
+<td><a href="https://40923242.github.io/cd2022/content/index.html">40923242</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923243</span><span><br/></span></td>
+<td><a href="https://github.com/40923243/cd2022">40923243</a></td>
+<td><a href="https://40923243.github.io/cd2022/content/index.html">40923243</a></td>
+<td>4</td>
+</tr>
+<tr>
+<td><span>40923245</span><span><br/></span></td>
+<td><a href="https://github.com/40923245-1/cd2022">40923245-1</a></td>
+<td><a href="https://40923245-1.github.io/cd2022/content/index.html">40923245-1</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923246</span><span><br/></span></td>
+<td><a href="https://github.com/40923246/cd2022">40923246</a></td>
+<td><a href="https://40923246.github.io/cd2022/content/index.html">40923246</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923247</span><span><br/></span></td>
+<td><a href="https://github.com/40923247/cd2022">40923247</a></td>
+<td><a href="https://40923247.github.io/cd2022/content/index.html">40923247</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923248</span><span><br/></span></td>
+<td><a href="https://github.com/40923248/cd2022">40923248</a></td>
+<td><a href="https://40923248.github.io/cd2022/content/index.html">40923248</a></td>
+<td>7</td>
+</tr>
+<tr>
+<td><span>40923249</span><span><br/></span></td>
+<td><a href="https://github.com/40923249-1/cd2022">40923249-1</a></td>
+<td><a href="https://40923249-1.github.io/cd2022/content/index.html">40923249-1</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923250</span><span><br/></span></td>
+<td><a href="https://github.com/40923250/cd2022">40923250</a></td>
+<td><a href="https://40923250.github.io/cd2022/content/index.html">40923250</a></td>
+<td>6</td>
+</tr>
+<tr>
+<td><span>40923251</span><span><br/></span></td>
+<td><a href="https://github.com/40923251/cd2022">40923251</a></td>
+<td><a href="https://40923251.github.io/cd2022/content/index.html">40923251</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40923252</span><span><br/></span></td>
+<td><a href="https://github.com/40923252/cd2022">40923252</a></td>
+<td><a href="https://40923252.github.io/cd2022/content/index.html">40923252</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><span>40923253</span><span><br/></span></td>
+<td><a href="https://github.com/40923253/cd2022">40923253</a></td>
+<td><a href="https://40923253.github.io/cd2022/content/index.html">40923253</a></td>
+<td>5</td>
+</tr>
+<tr>
+<td><span>40971220</span><span><br/></span></td>
+<td><a href="https://github.com/40971220/cd2022">40971220</a></td>
+<td><a href="https://40971220.github.io/cd2022/content/index.html">40971220</a></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h1>其他</h1>
+<h2>分配到的作業</h2>
+<p>21:<a href="https://youtu.be/9s4ppar92pc">4472 LAB 06 ROCKER ARM</a></p>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/21.mp4" width="560"></iframe></p>
+<p>22:<a href="https://youtu.be/nvh3H8MXZpE">4472 LAB 06 ROCKER ARM Working Drawing</a></p>
+<p></p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 599, y: 359, width: 60, height: 24 }, target: 3 },
+    ],
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
+<source src="https://40923218.github.io/cd2022/downloads/22.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+<p>23:<a href="https://youtu.be/fArhw14iSIg">4472 HW13 NX Linked Body Brake Rotor</a></p>
+<p></p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 27, y: 94, width: 60, height: 24 }, target: 3 },
+    ],
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
+<source src="https://40923218.github.io/cd2022/downloads/23.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+<p></p>
+<p>24:<a href="https://youtu.be/Rl9n3Wmvbyg">4472 HW14 NX Part Family Example</a></p>
+<p></p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+    "2": [
+      { type: "gotoframe", rect: { x: 124, y: 192, width: 60, height: 24 }, target: 3 },
+    ],
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
+<source src="https://40923218.github.io/cd2022/downloads/24.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass"></div>
+</div>
+<div class="winkVideoPlayOverlayClass"></div>
+</div>
+<p></p>
+<p></p>
+<p>25:<a href="https://youtu.be/KHWFCeB0ZH4">4472 Lab 07 NX Assembly Modeling - Pattern Component</a></p>
+<p></p>
+<script>
+var winkVideoData = {
+  dataVersion: 1,
+  frameRate: 10,
+  buttonFrameLength: 5,
+  buttonFrameOffset: 2,
+  frameStops: {
+  },
+};
+</script>
+<div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" data-dirname="./../cmsimde/static" data-varname="winkVideoData" height="1080" loop="loop" muted="" playsinline="" width="1920">
+<source src="https://40923218.github.io/cd2022/downloads/25.mp4" type="video/mp4"/></video>
+<div class="winkVideoOverlayClass"></div>
+<div class="winkVideoControlBarClass"><button class="winkVideoControlBarPlayButtonClass"></button> <button class="winkVideoControlBarPauseButtonClass"></button>
+<div class="winkVideoControlBarProgressLeftClass"></div>
+<div class="winkVideoControlBarProgressEmptyMiddleClass"></div>
+<div class="winkVideoControlBarProgressRightClass"></div>
+<div class="winkVideoControlBarProgressFilledMiddleClass"></div>
+<div class="winkVideoControlBarProgressThumbClass">
+<h2>Scarysim無法開啟解決方法</h2>
+<p>感謝同學相助<br/><a href="https://drive.google.com/drive/folders/1Ntk-dfI9GIgw_QVyUj3sSobkZOIkaAGY">按此下載檔案</a></p>
+<p></p>
+<p>第一步:</p>
+<p>下載檔案後解壓縮</p>
+<p></p>
+<p>第二步:</p>
+<p>解壓縮內有<span>"<span>release</span>"資料夾，經整個資料夾丟到colne下來的"<span>scarysim</span>"裡面</span></p>
+<p><img alt="" height="50%" src="/images/noname.png" width="50%"/></p>
+<p></p>
+<p>第三步:</p>
+<p>將解壓縮內的"<span>coppeliasim410_msys2</span>"丟到data資料夾內</p>
+<p><img alt="" height="50%" src="/images/noname2.png" width="50%"/></p>
+<p></p>
+<p>第四步:開啟資料夾內部的"<span>Scarysim.exe</span>"即可</p>
+<p><img alt="" height="50%" src="/images/noname3.png" width="50%"/></p>
+</div>
+</div>
+<div class="winkVideoPlayOverlayClass">
+<h2>心得</h2>
+<div>
+<div>本學期主要目標在透過網路操控機械手臂，目前已經可以用Coppliasim完成模擬。</div>
+<div>同時也學會了用其他的程式建立自己的網頁，透過其他網頁來展示自己目前的進度。</div>
+<div>希望後面的線上課程不會有太多的問題。</div>
+</div>
+</div>
+</div>
+<h2>run</h2>
+<script src="/get_page/run/cmsimde_site_files/brython.js.下載">
+</script>
+<script src="/get_page/run/cmsimde_site_files/brython_stdlib.js.下載"></script>
+<!-- for ggame -->
+<p>
+<script src="/get_page/run/cmsimde_site_files/jquery-3.3.1.min.js(1).下載"></script>
+<script src="/get_page/run/cmsimde_site_files/jquery-ui.1.12.1.min.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/pixi-3.0.5.min.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/buzz-1.2.1.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/bs.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/brython_modules.js.下載"></script>
+</p>
+<!-- Cango 程式庫 -->
+<p>
+<script src="/get_page/run/cmsimde_site_files/Cango-24v03-min.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/CangoAxes-6v01-min.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/gearUtils-09.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/SVGpathUtils-6v03-min.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/sylvester.js.下載"></script>
+<script src="/get_page/run/cmsimde_site_files/PrairieDraw.js.下載"></script>
+</p>
+<!-- for Konva 程式庫 -->
+<p>
+<script src="/get_page/run/cmsimde_site_files/konva.min.js.下載"></script>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/get_page/run/cmsimde_site_files/FileSaver.min.js.下載" type="text/javascript"></script>
+<script src="/get_page/run/cmsimde_site_files/filereader.js.下載" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/get_page/run/cmsimde_site_files/ace.js.下載" type="text/javascript"></script>
+<script src="/get_page/run/cmsimde_site_files/ext-language_tools.js.下載" type="text/javascript"></script>
+<script src="/get_page/run/cmsimde_site_files/mode-python3.js.下載" type="text/javascript"></script>
+<script src="/get_page/run/cmsimde_site_files/python.js.下載" type="text/javascript"></script>
+</p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["py_src"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/javascript">
+function doSave(storage_id, filename){
+    var blob = new Blob([localStorage[storage_id]], {type: "text/plain;charset=utf-8"});
+    filename = document.getElementById(filename).value
+    saveAs(blob, filename+".py");
+}
+</script>
+</p>
+<p><!-- 印出版次與關鍵字程式 --></p>
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd1(ev):
+    bd = doc["brython_div1"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace2 = ace.Editor(editor_id="kw_editor1", console_id="kw_console1", container_id="kw__container1", storage_id="kw_py_src1" )
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace2.editor.setValue(open(self.url).read())
+        Ace2.editor.scrollToRow(0)
+        Ace2.editor.gotoLine(0)
+        Ace2.run()
+
+################################## grp_2022 start
+# for 2b
+grp_2022_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/c7043ac81005b069c58080c1222fe30048d588cb/grp_2022.py"
+grp_2022 = button2(grp_2022_url)
+doc["grp_2022"].bind("click", grp_2022.do)
+################################## grp_2022 end
+################################## grp2a_2022 start
+# for 2a
+grp2a_2022_url = "https://gist.githubusercontent.com/mdecourse/05930b1775b77293523b59b1bbb43e57/raw/b78b018f841326f9c8d0ef2391cb5898fa9aaf87/grp2a_2022.py"
+grp2a_2022 = button2(grp2a_2022_url)
+doc["grp2a_2022"].bind("click", grp2a_2022.do)
+################################## grp2a_2022 end
+</script>
+</p>
+<p><button id="grp2a_2022">grp2a_2022</button><button id="grp_2022">grp_2022</button></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<!-- 存擋表單開始 --><form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src', 'kw_filename');" type="submit" value="Save"/></form><!-- 存擋表單結束 -->
+<p></p>
+<!-- 執行與清除按鈕開始 -->
+<p><button id="kw_run">Run</button> <button id="kw_show_console">Output</button> <button id="kw_clear_console">清除輸出區</button><button id="clear_bd">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<!-- 執行與清除按鈕結束 -->
+<p></p>
+<!-- 程式執行 ouput 區 -->
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console"></textarea></div>
+<!-- Brython 程式執行的結果, 都以 brython_div 作為切入位置 -->
+<div id="brython_div"></div>
+<!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="https://mde.tw/cp2021/cmsimde/static/Cango-24v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/gearUtils-09.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/SVGpathUtils-6v03-min.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/sylvester.js"></script>
+<script src="https://mde.tw/cp2021/cmsimde/static/PrairieDraw.js"></script>
+<p></p>
+<h1>midterm</h1>
+<p><a href="https://40923218.github.io/cd2022/reveal/index.html">兩周進度簡報</a></p>
+<p>Arm機構做動</p>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" frameborder="0" height="313" src="https://40923218.github.io/cd2022/downloads/Arm.mp4" width="560"></iframe></p>
+<hr/>
+<p><strong>零件繪圖</strong></p>
+<p></p>
+<table style="width: 100%; height: 100%;">
+<tbody>
+<tr>
+<td style="width: 0px; text-align: center;">導光件</td>
+<td style="width: 0px; text-align: center;">電機軸承支撐左側</td>
+<td style="width: 0px; text-align: center;">電機軸承支撐右側</td>
+</tr>
+<tr>
+<td style="width: 0px;">
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/glVGP1RIzNQ" title="YouTube video player" width="640"></iframe></p>
+</td>
+<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/QEtO1yfH0dM" title="YouTube video player" width="640"></iframe></td>
+<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/dlGmwjUMqRI" title="YouTube video player" width="640"></iframe></td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<hr/>
+<p></p>
+<table style="width: 100%; height: 100%;">
+<tbody>
+<tr>
+<td style="width: 0px; text-align: center;">電源按鍵</td>
+<td style="width: 0px; text-align: center;">底座上蓋 貼紙</td>
+<td style="width: 0px; text-align: center;">6*2 5磁鐵</td>
+</tr>
+<tr>
+<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/A4CZAHRkUTY" title="YouTube video player" width="640"></iframe></td>
+<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/uje_rySVEzw" title="YouTube video player" width="640"></iframe></td>
+<td style="width: 0px;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="360" src="https://www.youtube.com/embed/nvZZteU93nk" title="YouTube video player" width="640"></iframe></td>
+</tr>
+</tbody>
+</table>
+<p></p>
 <h1>History</h1>
 <p>3/3:</p>
 <p>Initial commit</p>
@@ -2699,3 +2700,7 @@ M3X5 圆头黑色十字螺丝
 <p>6/9:</p>
 <p>Join w16 image</p>
 <p>(新增w16圖片)</p>
+<p> </p>
+<p>6/10:</p>
+<p>Web fix</p>
+<p>(網頁修正)</p>
